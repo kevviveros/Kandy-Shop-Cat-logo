@@ -4177,7 +4177,15 @@
       productCards.forEach(card => {
         const name = (card.getAttribute('data-name') || '').toLowerCase();
         const sku = card.querySelector('.sku')?.innerText.toLowerCase() || "";
-        if (name.includes(term) || sku.includes(term)) {
+        
+        let catTitle = "";
+        const section = card.closest('.cat-section');
+        if (section) {
+          const h2 = section.querySelector('.cat-title');
+          if (h2) catTitle = h2.innerText.toLowerCase();
+        }
+
+        if (name.includes(term) || sku.includes(term) || catTitle.includes(term)) {
           card.style.display = '';
           matchingCount++;
         } else {
