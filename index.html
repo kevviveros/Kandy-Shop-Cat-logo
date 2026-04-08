@@ -1,0 +1,4032 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kandy Sex Shop | Catálogo 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    :root {
+      --pink: #FF20BF;
+      --dpink: #c4007a;
+      --dark: #ffffff;
+      --card: #f7f7f7;
+      --text: #1a1a1a;
+      --sub: #888
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden
+    }
+
+    /* COVER */
+    #cover {
+      height: 100svh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #1a0020 0%, #0d0d0d 100%);
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden
+    }
+
+    #cover::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 35%, rgba(255, 32, 191, .25) 0%, transparent 75%)
+    }
+
+    .cover-logo {
+      font-size: 5.5rem;
+      font-weight: 900;
+      color: var(--pink);
+      letter-spacing: 1px;
+      line-height: 0.85;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 50px rgba(255, 32, 191, .5)
+    }
+
+    .cover-sub {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      letter-spacing: 12px;
+      text-transform: uppercase
+    }
+
+    .cover-year {
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, .6);
+      letter-spacing: 4px;
+      font-weight: 300
+    }
+
+    .cover-divider {
+      width: 60px;
+      height: 3px;
+      background: var(--pink);
+      border-radius: 2px;
+      margin: 2rem auto
+    }
+
+    .cover-tagline {
+      font-size: .95rem;
+      color: rgba(255, 255, 255, .7);
+      max-width: 300px;
+      line-height: 1.6;
+      margin: 0 auto 2.5rem;
+      font-weight: 300
+    }
+
+    .cover-btn {
+      display: inline-block;
+      padding: 1.1rem 3rem;
+      background: var(--pink);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.15rem;
+      border-radius: 60px;
+      text-decoration: none;
+      box-shadow: 0 0 35px rgba(255, 32, 191, .45);
+      transition: transform .2s, box-shadow .2s;
+      border: none;
+      cursor: pointer
+    }
+
+    .cover-btn:active {
+      transform: scale(.95)
+    }
+
+    /* NAV */
+    #nav-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid rgba(255, 32, 191, 0.25);
+      display: flex;
+      align-items: center;
+      padding: .7rem 1rem;
+      gap: .8rem;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      transform: translateY(-101%);
+      opacity: 0;
+    }
+
+    .nav-logo {
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--pink);
+      letter-spacing: 1px;
+      cursor: pointer
+    }
+
+    .nav-search {
+      flex: 1;
+      background: #f0f0f0;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: .4rem .9rem;
+      color: #1a1a1a;
+      font-size: .85rem;
+      outline: none;
+      font-family: inherit
+    }
+
+    /* INDEX */
+    #cat-index {
+      padding: 6rem 1rem 2rem;
+      background: #fafafa;
+      border-bottom: 1px solid #eee
+    }
+
+    #cat-index h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--pink);
+      margin-bottom: 2rem;
+      text-align: center;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem
+    }
+
+    .index-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .7rem
+    }
+
+    .index-card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      text-align: center;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid #eee;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
+      transition: transform .2s, border-color .2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: .9rem .5rem .7rem
+    }
+
+    .index-card:active {
+      transform: scale(.95);
+      border-color: var(--pink)
+    }
+
+    .index-emoji {
+      font-size: 2rem;
+      margin-bottom: .4rem
+    }
+
+    .index-label {
+      font-size: .65rem;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: .5px
+    }
+
+    /* SECTIONS */
+    .cat-section {
+      padding: 2rem 1rem 1rem;
+      background: #fff
+    }
+
+    .cat-title {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--pink);
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid rgba(255, 32, 191, .2);
+      padding-bottom: .6rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.2rem;
+      align-items: stretch
+    }
+
+    .product-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1.5px solid #f2f2f2;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+      transition: all .3s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%
+    }
+
+    .product-card:active {
+      border-color: var(--pink);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 32, 191, .1)
+    }
+
+    .product-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: contain;
+      background: #fff;
+      padding: .8rem;
+      border-bottom: 1px solid #f8f8f8
+    }
+
+    .product-info {
+      padding: 1.1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between
+    }
+
+    .product-name {
+      font-size: .88rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: .4rem;
+      color: #1a1a1a;
+      /* Name appears full now */
+      min-height: 2.5rem;
+      word-wrap: break-word
+    }
+
+    .product-price {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--pink);
+      margin-top: auto
+    }
+
+    .sku {
+      font-size: .62rem;
+      color: #999;
+      margin-bottom: .6rem;
+      font-family: monospace;
+      letter-spacing: 0.5px
+    }
+
+    /* FOOTER */
+    footer {
+      background: #f9f9f9;
+      border-top: 1px solid #eee;
+      padding: 2.5rem 1rem;
+      text-align: center
+    }
+
+    footer p {
+      color: #888;
+      font-size: .75rem;
+      line-height: 1.8
+    }
+
+    /* FLOATING MENU */
+    #menu-btn {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 200;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--pink);
+      border: none;
+      box-shadow: 0 5px 20px rgba(255, 32, 191, .4);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s
+    }
+
+    #menu-btn svg {
+      width: 26px;
+      height: 26px;
+      fill: #fff
+    }
+
+    #cat-drawer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 210;
+      background: #fff;
+      border-radius: 24px 24px 0 0;
+      box-shadow: 0 -5px 30px rgba(0, 0, 0, .15);
+      transform: translateY(100%);
+      transition: transform .32s cubic-bezier(.4, 0, .2, 1);
+      max-height: 80vh;
+      overflow-y: auto
+    }
+
+    #cat-drawer.open {
+      transform: translateY(0)
+    }
+
+    .drawer-header {
+      padding: 1.2rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: #fff;
+      z-index: 2
+    }
+
+    .drawer-header h3 {
+      font-size: 1rem;
+      color: var(--pink);
+      font-weight: 800
+    }
+
+    .drawer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .6rem;
+      padding: 1rem
+    }
+
+    .drawer-link {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .8rem;
+      border-radius: 14px;
+      background: #f8f8f8;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-size: .85rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: background .2s
+    }
+
+    .drawer-link:active {
+      background: #fff0fb;
+      border-color: var(--pink)
+    }
+
+    #overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 180;
+      background: rgba(0, 0, 0, .4);
+      display: none
+    }
+
+    #overlay.show {
+      display: block
+    }
+
+    /* =============================================
+       DESKTOP STYLES (768px+)
+       ============================================= */
+    @media (min-width: 768px) {
+
+      /* Wider centered container for all content */
+      main, #cat-index, .cat-section, footer {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      /* Nav bar */
+      #nav-bar {
+        padding: 1rem 2rem;
+        max-width: none;
+      }
+
+      .nav-logo {
+        font-size: 1.4rem;
+      }
+
+      .nav-search {
+        max-width: 400px;
+        font-size: .95rem;
+        padding: .5rem 1.2rem;
+      }
+
+      /* Cover hero */
+      .cover-logo  { font-size: 9rem }
+      .cover-sub   { font-size: 2rem; letter-spacing: 18px }
+      .cover-year  { font-size: 1.5rem }
+      .cover-tagline { font-size: 1.1rem; max-width: 480px }
+      .cover-btn   { font-size: 1.3rem; padding: 1.3rem 4rem }
+
+      /* Category index grid: 5 columns on desktop */
+      .index-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+      }
+
+      .index-card {
+        padding: 1.2rem .8rem 1rem;
+      }
+
+      .index-emoji { font-size: 2.4rem }
+      .index-label { font-size: .75rem }
+
+      #cat-index h2 {
+        font-size: 2rem;
+        margin-bottom: 2.5rem;
+      }
+
+      /* Product grid: 4 columns on desktop */
+      .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+      }
+
+      .cat-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+      }
+
+      .cat-section {
+        padding: 3rem 2rem 2rem;
+      }
+
+      .product-name {
+        font-size: .9rem;
+      }
+
+      .product-price {
+        font-size: 1.2rem;
+      }
+
+      .sku {
+        font-size: .65rem;
+      }
+
+      /* Floating menu button — hide on desktop, show drawer links in nav */
+      #menu-btn {
+        display: none;
+      }
+
+      /* Footer */
+      footer {
+        padding: 3rem 2rem;
+      }
+
+      footer p {
+        font-size: .85rem;
+      }
+    }
+
+    /* Large screens (1280px+): 5 product columns */
+    @media (min-width: 1280px) {
+      .product-grid {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .index-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <section id="cover">
+    <div class="cover-logo">KANDY</div>
+    <div class="cover-sub">SEX SHOP</div>
+    <div class="cover-year">Catálogo 2026</div>
+    <div class="cover-divider"></div>
+    <p class="cover-tagline">Placer de calidad, discreción garantizada. Descubre nuestra colección completa.</p>
+    <div style="color: #fff; font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 32, 191, 0.15); padding: 0.6rem 2rem; border-radius: 50px; border: 1px solid rgba(255, 32, 191, 0.5); margin-bottom: 2.5rem; box-shadow: 0 0 15px rgba(255, 32, 191, 0.2);">
+      <span>🚚</span> Contamos con envío a domicilio
+    </div>
+    <a href="#cat-index" class="cover-btn" onclick="enterCatalog(event)">Ver Catálogo →</a>
+  </section>
+  <nav id="nav-bar">
+    <div class="nav-logo" onclick="goHome()">KANDY</div>
+    <input class="nav-search" type="search" id="search-input" placeholder="🔍 Buscar por nombre o SKU..."
+      oninput="handleSearch(this.value)">
+  </nav>
+  <main id="main-content">
+
+    <section id="cat-index" aria-label="Índice de categorías">
+      <h2>🏷️ CATEGORÍAS</h2>
+      <div class="index-grid">
+        <a href="#vibradores" class="index-card">
+          <div class="index-emoji">💜</div>
+          <div class="index-label">Vibradores</div>
+        </a>
+        <a href="#anillos" class="index-card">
+          <div class="index-emoji">💍</div>
+          <div class="index-label">Anillos</div>
+        </a>
+        <a href="#dildos" class="index-card">
+          <div class="index-emoji">🔥</div>
+          <div class="index-label">Dildos</div>
+        </a>
+        <a href="#lubricantes" class="index-card">
+          <div class="index-emoji">💧</div>
+          <div class="index-label">Lubricantes</div>
+        </a>
+        <a href="#lenceria" class="index-card">
+          <div class="index-emoji">🖤</div>
+          <div class="index-label">Lencería</div>
+        </a>
+        <a href="#masturbadores" class="index-card">
+          <div class="index-emoji">🌀</div>
+          <div class="index-label">Masturbadores</div>
+        </a>
+        <a href="#pluganal" class="index-card">
+          <div class="index-emoji">🔮</div>
+          <div class="index-label">Plug Anal</div>
+        </a>
+        <a href="#comestibles" class="index-card">
+          <div class="index-emoji">🍬</div>
+          <div class="index-label">Comestibles</div>
+        </a>
+        <a href="#arneses" class="index-card">
+          <div class="index-emoji">🔗</div>
+          <div class="index-label">Arneses</div>
+        </a>
+        <a href="#bolas" class="index-card">
+          <div class="index-emoji">⚪</div>
+          <div class="index-label">Bolas Vaginales</div>
+        </a>
+        <a href="#bombas" class="index-card">
+          <div class="index-emoji">💨</div>
+          <div class="index-label">Bombas</div>
+        </a>
+        <a href="#bondage" class="index-card">
+          <div class="index-emoji">🔒</div>
+          <div class="index-label">Bondage</div>
+        </a>
+        <a href="#despedida" class="index-card">
+          <div class="index-emoji">🎉</div>
+          <div class="index-label">Despedida</div>
+        </a>
+        <a href="#disfraces" class="index-card">
+          <div class="index-emoji">💃</div>
+          <div class="index-label">Disfraces</div>
+        </a>
+        <a href="#enemas" class="index-card">
+          <div class="index-emoji">🚿</div>
+          <div class="index-label">Enemas</div>
+        </a>
+        <a href="#estimulantes" class="index-card">
+          <div class="index-emoji">⚡</div>
+          <div class="index-label">Estimulantes</div>
+        </a>
+        <a href="#feromonas" class="index-card">
+          <div class="index-emoji">✨</div>
+          <div class="index-label">Feromonas</div>
+        </a>
+        <a href="#fundas" class="index-card">
+          <div class="index-emoji">🧲</div>
+          <div class="index-label">Fundas</div>
+        </a>
+        <a href="#preservativos" class="index-card">
+          <div class="index-emoji">🛡️</div>
+          <div class="index-label">Preservativos</div>
+        </a>
+        <a href="#masajeadores" class="index-card">
+          <div class="index-emoji">💆</div>
+          <div class="index-label">Masajeadores</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="cat-section" id="anillos">
+      <h2 class="cat-title">Anillos Vibradores</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="anillo vibrador couples play – vibrating cock">
+          <img class="product-img" src="images/image417.png" alt="Anillo Vibrador Couples Play – Vibrating Cock">
+          <div class="product-info">
+            <div class="sku">BL-77901</div>
+            <div class="product-name">Anillo Vibrador Couples Play – Vibrating Cock</div>
+            <div class="product-price">$447.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anillo vibrador lick it– vibrating double strap">
+          <img class="product-img" src="images/image420.png" alt="Anillo Vibrador Lick It– Vibrating Double Strap">
+          <div class="product-info">
+            <div class="sku">BL-61911</div>
+            <div class="product-name">Anillo Vibrador Lick It– Vibrating Double Strap</div>
+            <div class="product-price">$430.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anillo vibrador double play -dual vibrating">
+          <img class="product-img" src="images/image414.png" alt="Anillo Vibrador Double Play -Dual Vibrating">
+          <div class="product-info">
+            <div class="sku">BL-77101</div>
+            <div class="product-name">Anillo Vibrador Double Play -Dual Vibrating</div>
+            <div class="product-price">$590.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anillos multiples king of the ring c pack">
+          <img class="product-img" src="images/image411.png" alt="Anillos Multiples King of the Ring C Pack">
+          <div class="product-info">
+            <div class="sku">BL-93652</div>
+            <div class="product-name">Anillos Multiples King of the Ring C Pack</div>
+            <div class="product-price">$182.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anillos stay hard beaded cock rings clear">
+          <img class="product-img" src="images/image412.png" alt="Anillos Stay Hard Beaded Cock Rings Clear">
+          <div class="product-info">
+            <div class="sku">BL-00012</div>
+            <div class="product-name">Anillos Stay Hard Beaded Cock Rings Clear</div>
+            <div class="product-price">$105.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anillos stay hard beaded cock rings black">
+          <img class="product-img" src="images/image425.png" alt="Anillos Stay Hard Beaded Cock Rings Black">
+          <div class="product-info">
+            <div class="sku">BL-00015</div>
+            <div class="product-name">Anillos Stay Hard Beaded Cock Rings Black</div>
+            <div class="product-price">$105.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anillo estimulador eléctrico deschable">
+          <img class="product-img" src="images/image429.png" alt="Anillo Estimulador Eléctrico Deschable">
+          <div class="product-info">
+            <div class="sku">VR-0001</div>
+            <div class="product-name">Anillo Estimulador Eléctrico Deschable</div>
+            <div class="product-price">$85.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rock rings the hellfire l black">
+          <img class="product-img" src="images/image419.jpg" alt="Rock Rings The Hellfire L Black">
+          <div class="product-info">
+            <div class="sku">N005B1F173B1</div>
+            <div class="product-name">Rock Rings The Hellfire L Black</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rock rings cocktagon xxl black">
+          <img class="product-img" src="images/image423.jpg" alt="Rock Rings Cocktagon XXL Black">
+          <div class="product-info">
+            <div class="sku">N005B1F172B1</div>
+            <div class="product-name">Rock Rings Cocktagon XXL Black</div>
+            <div class="product-price">$180.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rock rings hellfire li 2 pack">
+          <img class="product-img" src="images/image426.jpg" alt="Rock Rings Hellfire LI 2 Pack">
+          <div class="product-info">
+            <div class="sku">N</div>
+            <div class="product-name">Rock Rings Hellfire LI 2 Pack</div>
+            <div class="product-price">$215.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rock rings cocktagon l black">
+          <img class="product-img" src="images/image144.jpg" alt="Rock Rings Cocktagon L Black">
+          <div class="product-info">
+            <div class="sku">N</div>
+            <div class="product-name">Rock Rings Cocktagon L Black</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fantasy c-ringz peak performance ring black">
+          <img class="product-img" src="images/image164.jpg" alt="Fantasy C-Ringz Peak Performance Ring Black">
+          <div class="product-info">
+            <div class="sku">PD5965-23</div>
+            <div class="product-name">Fantasy C-Ringz Peak Performance Ring Black</div>
+            <div class="product-price">$295.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fantasy c-ringz vibrating duo super ring">
+          <img class="product-img" src="images/image156.jpg" alt="Fantasy C-Ringz Vibrating Duo Super Ring">
+          <div class="product-info">
+            <div class="sku">PD5863-12</div>
+            <div class="product-name">Fantasy C-Ringz Vibrating Duo Super Ring</div>
+            <div class="product-price">$503.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fantasy c-ringz vibrating super ring">
+          <img class="product-img" src="images/image161.png" alt="Fantasy C-Ringz Vibrating Super Ring">
+          <div class="product-info">
+            <div class="sku">PD5861-12</div>
+            <div class="product-name">Fantasy C-Ringz Vibrating Super Ring</div>
+            <div class="product-price">$408.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fantasy c-ringz vibrating duo super ring black">
+          <img class="product-img" src="images/image154.jpg" alt="Fantasy C-Ringz Vibrating Duo Super Ring Black">
+          <div class="product-info">
+            <div class="sku">PD5863-23</div>
+            <div class="product-name">Fantasy C-Ringz Vibrating Duo Super Ring Black</div>
+            <div class="product-price">$503.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anillo vibrador nojo-c3 ring">
+          <img class="product-img" src="images/image152.jpg" alt="Anillo Vibrador Nojo-C3 Ring">
+          <div class="product-info">
+            <div class="sku">BL-91401</div>
+            <div class="product-name">Anillo Vibrador Nojo-C3 Ring</div>
+            <div class="product-price">$1,348.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora c anillo con control remoto">
+          <img class="product-img" src="images/image157.png" alt="Bala Vibradora C Anillo con Control Remoto">
+          <div class="product-info">
+            <div class="sku">AG572</div>
+            <div class="product-name">Bala Vibradora C Anillo con Control Remoto</div>
+            <div class="product-price">$620.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anillo vibrador wabbit wonderful purple">
+          <img class="product-img" src="images/image160.jpg" alt="Anillo Vibrador Wabbit Wonderful Purple">
+          <div class="product-info">
+            <div class="sku">PD2332-12</div>
+            <div class="product-name">Anillo Vibrador Wabbit Wonderful Purple</div>
+            <div class="product-price">$1,155.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="arneses">
+      <h2 class="cat-title">Arneses</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="arnés lésbico premium loje">
+          <img class="product-img" src="images/image158.jpg" alt="Arnés Lésbico Premium Loje">
+          <div class="product-info">
+            <div class="sku">ST047</div>
+            <div class="product-name">Arnés Lésbico Premium Loje</div>
+            <div class="product-price">$200.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="arnéses - suspensorio">
+          <img class="product-img" src="images/image302.jpg" alt="Arnéses - Suspensorio">
+          <div class="product-info">
+            <div class="sku">ST072</div>
+            <div class="product-name">Arnéses - Suspensorio</div>
+            <div class="product-price">$297.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="arnéses – suspensorio premium loje">
+          <img class="product-img" src="images/image131.jpg" alt="Arnéses – Suspensorio Premium Loje">
+          <div class="product-info">
+            <div class="sku">ST075</div>
+            <div class="product-name">Arnéses – Suspensorio Premium Loje</div>
+            <div class="product-price">$297.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="arnéses – sencillo premium loje">
+          <img class="product-img" src="images/image130.jpg" alt="Arnéses – Sencillo Premium Loje">
+          <div class="product-info">
+            <div class="sku">ST074</div>
+            <div class="product-name">Arnéses – Sencillo Premium Loje</div>
+            <div class="product-price">$297.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="arnés 8" c badir">
+          <img class="product-img" src="images/image147.jpg" alt="Arnés 8&quot; C Badir">
+          <div class="product-info">
+            <div class="sku">ST084</div>
+            <div class="product-name">Arnés 8&quot; C Badir</div>
+            <div class="product-price">$667.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="arnés s 9" zanath">
+          <img class="product-img" src="images/image138.jpg" alt="Arnés S 9&quot; Zanath">
+          <div class="product-info">
+            <div class="sku">ST086</div>
+            <div class="product-name">Arnés S 9&quot; Zanath</div>
+            <div class="product-price">$545.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="arnés 6.6" paxton">
+          <img class="product-img" src="images/image136.png" alt="Arnés 6.6&quot; PAXTON">
+          <div class="product-info">
+            <div class="sku">ST085</div>
+            <div class="product-name">Arnés 6.6&quot; PAXTON</div>
+            <div class="product-price">$488.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="arnés 7" gospel">
+          <img class="product-img" src="images/image139.png" alt="Arnés 7&quot; GOSPEL">
+          <div class="product-info">
+            <div class="sku">ST083</div>
+            <div class="product-name">Arnés 7&quot; GOSPEL</div>
+            <div class="product-price">$488.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="arnéses 8.5 betty's jelly bummble bee">
+          <img class="product-img" src="images/image142.jpg" alt="Arnéses 8.5 Betty's Jelly Bummble Bee">
+          <div class="product-info">
+            <div class="sku">SE-0603-04-3</div>
+            <div class="product-name">Arnéses 8.5 Betty's Jelly Bummble Bee</div>
+            <div class="product-price">$1,571.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="arnés blush 7 hollow strap on - black">
+          <img class="product-img" src="images/image171.png" alt="Arnés Blush 7 Hollow Strap on - black">
+          <div class="product-info">
+            <div class="sku">BL-72885</div>
+            <div class="product-name">Arnés Blush 7 Hollow Strap on - black</div>
+            <div class="product-price">$1,122.50</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="bondage">
+      <h2 class="cat-title">Bondage</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="kit fetish stoys - sencillo">
+          <img class="product-img" src="images/image197.jpg" alt="Kit Fetish Stoys - Sencillo">
+          <div class="product-info">
+            <div class="sku">ST053</div>
+            <div class="product-name">Kit Fetish Stoys - Sencillo</div>
+            <div class="product-price">$375.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish fantasy cat-o-nine tails - black">
+          <img class="product-img" src="images/image202.jpg" alt="Fetish Fantasy Cat-O-Nine Tails - Black">
+          <div class="product-info">
+            <div class="sku">PD4402-00</div>
+            <div class="product-name">Fetish Fantasy Cat-O-Nine Tails - Black</div>
+            <div class="product-price">$264.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish pom pom nipple clamps black">
+          <img class="product-img" src="images/image199.jpg" alt="Fetish POM POM NIPPLE CLAMPS Black">
+          <div class="product-info">
+            <div class="sku">AG866</div>
+            <div class="product-name">Fetish POM POM NIPPLE CLAMPS Black</div>
+            <div class="product-price">$465.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish pom pom nipple clamps red">
+          <img class="product-img" src="images/image203.jpg" alt="Fetish POM POM NIPPLE CLAMPS Red">
+          <div class="product-info">
+            <div class="sku">AG866</div>
+            <div class="product-name">Fetish POM POM NIPPLE CLAMPS Red</div>
+            <div class="product-price">$465.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish fantasy series satin love mask - red">
+          <img class="product-img" src="images/image163.jpg" alt="Fetish Fantasy Series Satin Love Mask - Red">
+          <div class="product-info">
+            <div class="sku">PD390315</div>
+            <div class="product-name">Fetish Fantasy Series Satin Love Mask - Red</div>
+            <div class="product-price">$218.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish fantasy series breathable ball gag">
+          <img class="product-img" src="images/image169.jpg" alt="Fetish Fantasy Series Breathable Ball Gag">
+          <div class="product-info">
+            <div class="sku">PD2172-00</div>
+            <div class="product-name">Fetish Fantasy Series Breathable Ball Gag</div>
+            <div class="product-price">$385.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="temptasia beginner cuffs black">
+          <img class="product-img" src="images/image166.jpg" alt="Temptasia Beginner Cuffs Black">
+          <div class="product-info">
+            <div class="sku">Pl-55405</div>
+            <div class="product-name">Temptasia Beginner Cuffs Black</div>
+            <div class="product-price">$395.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="temptasia beginner cuffs pink">
+          <img class="product-img" src="images/image172.jpg" alt="Temptasia Beginner Cuffs Pink">
+          <div class="product-info">
+            <div class="sku">Pl-55600</div>
+            <div class="product-name">Temptasia Beginner Cuffs Pink</div>
+            <div class="product-price">$395.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish fantasy series beginner's curry cuffs">
+          <img class="product-img" src="images/image165.png" alt="Fetish Fantasy Series Beginner's Curry Cuffs">
+          <div class="product-info">
+            <div class="sku">PD3800-15</div>
+            <div class="product-name">Fetish Fantasy Series Beginner's Curry Cuffs</div>
+            <div class="product-price">$440.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish fantasy series beginner's metal cuffs">
+          <img class="product-img" src="images/image170.jpg" alt="Fetish Fantasy Series Beginner's Metal Cuffs">
+          <div class="product-info">
+            <div class="sku">PD3800-00</div>
+            <div class="product-name">Fetish Fantasy Series Beginner's Metal Cuffs</div>
+            <div class="product-price">$250.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish fantasy series official hand cuffs silver">
+          <img class="product-img" src="images/image176.png" alt="Fetish Fantasy Series Official Hand Cuffs Silver">
+          <div class="product-info">
+            <div class="sku">PD3805-00</div>
+            <div class="product-name">Fetish Fantasy Series Official Hand Cuffs Silver</div>
+            <div class="product-price">$500.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish play-time cuffs">
+          <img class="product-img" src="images/image175.png" alt="Fetish Play-Time Cuffs">
+          <div class="product-info">
+            <div class="sku">BL-55200</div>
+            <div class="product-name">Fetish Play-Time Cuffs</div>
+            <div class="product-price">$540.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish gag &amp; wrist restrint fantasy series">
+          <img class="product-img" src="images/image177.png" alt="Fetish Gag &amp;amp; Wrist Restrint Fantasy Series">
+          <div class="product-info">
+            <div class="sku">PD2178-23</div>
+            <div class="product-name">Fetish Gag &amp;amp; Wrist Restrint Fantasy Series</div>
+            <div class="product-price">$1,575.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fetish honeymoon bondage kit - white fantasy series">
+          <img class="product-img" src="images/image235.jpg" alt="Fetish Honeymoon Bondage Kit - White Fantasy Series">
+          <div class="product-info">
+            <div class="sku">PD2178-23</div>
+            <div class="product-name">Fetish Honeymoon Bondage Kit - White Fantasy Series</div>
+            <div class="product-price">$1,250.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="comestibles">
+      <h2 class="cat-title">Comestibles</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="blow job oral sex candy 10gm">
+          <img class="product-img" src="images/image234.jpg" alt="Blow Job Oral Sex Candy 10gm">
+          <div class="product-info">
+            <div class="sku">3593-D</div>
+            <div class="product-name">Blow Job Oral Sex Candy 10gm</div>
+            <div class="product-price">$40.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vigorizantes dicklips gummy cock rings">
+          <img class="product-img" src="images/image264.jpg" alt="Vigorizantes Dicklips Gummy Cock Rings">
+          <div class="product-info">
+            <div class="sku">3589-D</div>
+            <div class="product-name">Vigorizantes Dicklips Gummy Cock Rings</div>
+            <div class="product-price">$63.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="estimulante max women">
+          <img class="product-img" src="images/image242.png" alt="ESTIMULANTE MAX WOMEN">
+          <div class="product-info">
+            <div class="sku"></div>
+            <div class="product-name">ESTIMULANTE MAX WOMEN</div>
+            <div class="product-price">$65.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rino 69 superman honey">
+          <img class="product-img" src="images/image243.jpg" alt="RINO 69 SUPERMAN HONEY">
+          <div class="product-info">
+            <div class="sku">65249</div>
+            <div class="product-name">RINO 69 SUPERMAN HONEY</div>
+            <div class="product-price">$160.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rino 69 honey 60000">
+          <img class="product-img" src="images/image241.png" alt="RINO 69 HONEY 60000">
+          <div class="product-info">
+            <div class="sku">RH69001</div>
+            <div class="product-name">RINO 69 HONEY 60000</div>
+            <div class="product-price">$172.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="super freak love honey for women">
+          <img class="product-img" src="images/image253.jpg" alt="Super Freak Love Honey for Women">
+          <div class="product-info">
+            <div class="sku">12010</div>
+            <div class="product-name">Super Freak Love Honey for Women</div>
+            <div class="product-price">$172.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="super freak honey">
+          <img class="product-img" src="images/image274.jpg" alt="Super Freak Honey">
+          <div class="product-info">
+            <div class="sku">SFRH001</div>
+            <div class="product-name">Super Freak Honey</div>
+            <div class="product-price">$172.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bvip royal honey">
+          <img class="product-img" src="images/image254.jpg" alt="BVIP ROYAL HONEY">
+          <div class="product-info">
+            <div class="sku">ROH001</div>
+            <div class="product-name">BVIP ROYAL HONEY</div>
+            <div class="product-price">$150.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bburro en primavera honey orange flavor">
+          <img class="product-img" src="images/image258.jpg" alt="BBURRO EN PRIMAVERA HONEY ORANGE FLAVOR">
+          <div class="product-info">
+            <div class="sku">BPHOF</div>
+            <div class="product-name">BBURRO EN PRIMAVERA HONEY ORANGE FLAVOR</div>
+            <div class="product-price">$160.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rhino chocolate lustella">
+          <img class="product-img" src="images/image238.png" alt="Rhino Chocolate Lustella">
+          <div class="product-info">
+            <div class="sku">LUST101</div>
+            <div class="product-name">Rhino Chocolate Lustella</div>
+            <div class="product-price">$245.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="strawberry chocolate">
+          <img class="product-img" src="images/image208.jpg" alt="Strawberry Chocolate">
+          <div class="product-info">
+            <div class="sku">50633</div>
+            <div class="product-name">Strawberry Chocolate</div>
+            <div class="product-price">$322.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fantasy chocolate para hombre">
+          <img class="product-img" src="images/image219.jpg" alt="Fantasy Chocolate para Hombre">
+          <div class="product-info">
+            <div class="sku">FSCM001</div>
+            <div class="product-name">Fantasy Chocolate para Hombre</div>
+            <div class="product-price">$398.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fantasy chocolate para mujer">
+          <img class="product-img" src="images/image218.jpg" alt="Fantasy Chocolate para Mujer">
+          <div class="product-info">
+            <div class="sku">FSCW001</div>
+            <div class="product-name">Fantasy Chocolate para Mujer</div>
+            <div class="product-price">$398.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="estimulantes">
+      <h2 class="cat-title">Estimulantes y Vigorizantes</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="vigorizantes c afrodisíacos cubana">
+          <img class="product-img" src="images/image215.jpg" alt="Vigorizantes C Afrodisíacos Cubana">
+          <div class="product-info">
+            <div class="sku">YC-001</div>
+            <div class="product-name">Vigorizantes C Afrodisíacos Cubana</div>
+            <div class="product-price">$75.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vigorizantes c afrodisíacos yohibe cubana plus ayh-02">
+          <img class="product-img" src="images/image221.jpg" alt="Vigorizantes C Afrodisíacos Yohibe Cubana Plus AYH-02">
+          <div class="product-info">
+            <div class="sku">AYH-02</div>
+            <div class="product-name">Vigorizantes C Afrodisíacos Yohibe Cubana Plus AYH-02</div>
+            <div class="product-price">$97.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="shot vigorizante berlín">
+          <img class="product-img" src="images/image228.jpg" alt="Shot Vigorizante Berlín">
+          <div class="product-info">
+            <div class="sku">SHTA-001</div>
+            <div class="product-name">Shot Vigorizante Berlín</div>
+            <div class="product-price">$147.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="shot vigorizante amsterdam">
+          <img class="product-img" src="images/image229.jpg" alt="Shot Vigorizante Amsterdam">
+          <div class="product-info">
+            <div class="sku">SHTA-002</div>
+            <div class="product-name">Shot Vigorizante Amsterdam</div>
+            <div class="product-price">$147.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="pastilla berlin vigorizante masculino">
+          <img class="product-img" src="images/image230.jpg" alt="Pastilla Berlin Vigorizante Masculino">
+          <div class="product-info">
+            <div class="sku">PV-001</div>
+            <div class="product-name">Pastilla Berlin Vigorizante Masculino</div>
+            <div class="product-price">$162.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="pastilla amsterdam vigorizante femenino">
+          <img class="product-img" src="images/image226.jpg" alt="Pastilla Amsterdam Vigorizante Femenino">
+          <div class="product-info">
+            <div class="sku">PV-002</div>
+            <div class="product-name">Pastilla Amsterdam Vigorizante Femenino</div>
+            <div class="product-price">$162.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vigorizantes c afrodisíacos pastilla ibiza woman">
+          <img class="product-img" src="images/image191.jpg" alt="Vigorizantes C Afrodisíacos Pastilla Ibiza Woman">
+          <div class="product-info">
+            <div class="sku">9712W</div>
+            <div class="product-name">Vigorizantes C Afrodisíacos Pastilla Ibiza Woman</div>
+            <div class="product-price">$192.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vigorizantes c afrodisíacos pastilla ibiza - gold">
+          <img class="product-img" src="images/image207.png" alt="Vigorizantes C Afrodisíacos Pastilla Ibiza - Gold">
+          <div class="product-info">
+            <div class="sku">9712</div>
+            <div class="product-name">Vigorizantes C Afrodisíacos Pastilla Ibiza - Gold</div>
+            <div class="product-price">$192.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vigorizante gomita rhino 69">
+          <img class="product-img" src="images/image292.jpg" alt="Vigorizante Gomita Rhino 69">
+          <div class="product-info">
+            <div class="sku">56430</div>
+            <div class="product-name">Vigorizante Gomita Rhino 69</div>
+            <div class="product-price">$223.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vigorizante gomita rhino silver platinum">
+          <img class="product-img" src="images/image298.jpg" alt="Vigorizante Gomita Rhino Silver Platinum">
+          <div class="product-info">
+            <div class="sku">53868</div>
+            <div class="product-name">Vigorizante Gomita Rhino Silver Platinum</div>
+            <div class="product-price">$223.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vigorizante gomita rhino king gold">
+          <img class="product-img" src="images/image293.jpg" alt="Vigorizante Gomita Rhino King Gold">
+          <div class="product-info">
+            <div class="sku">53863</div>
+            <div class="product-name">Vigorizante Gomita Rhino King Gold</div>
+            <div class="product-price">$223.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vigorizantes c afrodisíacos rhino 50 k extreme">
+          <img class="product-img" src="images/image306.png" alt="Vigorizantes C Afrodisíacos Rhino 50 K Extreme">
+          <div class="product-info">
+            <div class="sku">2835</div>
+            <div class="product-name">Vigorizantes C Afrodisíacos Rhino 50 K Extreme</div>
+            <div class="product-price">$187.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vigorizantes c afrodisíacospink pussycat vigorizante masculino">
+          <img class="product-img" src="images/image314.jpg" alt="Vigorizantes C AfrodisíacosPink Pussycat Vigorizante Masculino">
+          <div class="product-info">
+            <div class="sku">34122</div>
+            <div class="product-name">Vigorizantes C AfrodisíacosPink Pussycat Vigorizante Masculino</div>
+            <div class="product-price">$198.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rhino 69 extreme 60000 vigorizante masculino">
+          <img class="product-img" src="images/image297.jpg" alt="Rhino 69 Extreme 60000 Vigorizante Masculino">
+          <div class="product-info">
+            <div class="sku">7113</div>
+            <div class="product-name">Rhino 69 Extreme 60000 Vigorizante Masculino</div>
+            <div class="product-price">$187.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rhino 69 platinum 35000 vigorizante masculino">
+          <img class="product-img" src="images/image326.jpg" alt="Rhino 69 Platinum 35000 Vigorizante Masculino">
+          <div class="product-info">
+            <div class="sku">R2759</div>
+            <div class="product-name">Rhino 69 Platinum 35000 Vigorizante Masculino</div>
+            <div class="product-price">$187.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rhino 10 k platinum vigorizante masculino">
+          <img class="product-img" src="images/image301.jpg" alt="Rhino 10 K Platinum Vigorizante Masculino">
+          <div class="product-info">
+            <div class="sku">R275910</div>
+            <div class="product-name">Rhino 10 K Platinum Vigorizante Masculino</div>
+            <div class="product-price">$188.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rhino 100 k golden rhino vigorizante masculino">
+          <img class="product-img" src="images/image280.jpg" alt="Rhino 100 K Golden Rhino Vigorizante Masculino">
+          <div class="product-info">
+            <div class="sku">96561</div>
+            <div class="product-name">Rhino 100 K Golden Rhino Vigorizante Masculino</div>
+            <div class="product-price">$188.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="burro en primavera 500 k">
+          <img class="product-img" src="images/image282.png" alt="Burro En Primavera 500 K">
+          <div class="product-info">
+            <div class="sku">BPV001</div>
+            <div class="product-name">Burro En Primavera 500 K</div>
+            <div class="product-price">$220.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="burro en primavera 800k">
+          <img class="product-img" src="images/image289.jpg" alt="Burro En Primavera 800K">
+          <div class="product-info">
+            <div class="sku">BPV002</div>
+            <div class="product-name">Burro En Primavera 800K</div>
+            <div class="product-price">$325.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="kangaroo blue vigorizante masculino">
+          <img class="product-img" src="images/image295.png" alt="Kangaroo Blue Vigorizante Masculino">
+          <div class="product-info">
+            <div class="sku">6930</div>
+            <div class="product-name">Kangaroo Blue Vigorizante Masculino</div>
+            <div class="product-price">$357.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="kangaroo pink vigorizante femenino">
+          <img class="product-img" src="images/image272.png" alt="Kangaroo Pink Vigorizante Femenino">
+          <div class="product-info">
+            <div class="sku">1688F</div>
+            <div class="product-name">Kangaroo Pink Vigorizante Femenino</div>
+            <div class="product-price">$322.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="kangaroo violet vigorizante para ambos">
+          <img class="product-img" src="images/image266.jpg" alt="Kangaroo Violet Vigorizante Para Ambos">
+          <div class="product-info">
+            <div class="sku">ADV1700-99</div>
+            <div class="product-name">Kangaroo Violet Vigorizante Para Ambos</div>
+            <div class="product-price">$367.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="crema estimulante orgasmix – orgasm enhancement gel – 1oz">
+          <img class="product-img" src="images/image283.png" alt="Crema Estimulante Orgasmix – Orgasm Enhancement Gel – 1OZ">
+          <div class="product-info">
+            <div class="sku">2197</div>
+            <div class="product-name">Crema Estimulante Orgasmix – Orgasm Enhancement Gel – 1OZ</div>
+            <div class="product-price">$365.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="crema estimulante horney honey arousal cream – 1oz">
+          <img class="product-img" src="images/image265.jpg" alt="Crema Estimulante Horney Honey Arousal Cream – 1OZ">
+          <div class="product-info">
+            <div class="sku">2202</div>
+            <div class="product-name">Crema Estimulante Horney Honey Arousal Cream – 1OZ</div>
+            <div class="product-price">$405.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="gel y crema estimulante liquid vigin - hang tag box 1oz">
+          <img class="product-img" src="images/image220.jpg" alt="Gel y Crema Estimulante Liquid Vigin - Hang Tag Box 1OZ">
+          <div class="product-info">
+            <div class="sku">2198</div>
+            <div class="product-name">Gel y Crema Estimulante Liquid Vigin - Hang Tag Box 1OZ</div>
+            <div class="product-price">$365.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="loción corporal retardín spray – 15 ml">
+          <img class="product-img" src="images/image222.jpg" alt="Loción Corporal Retardín Spray – 15 ML">
+          <div class="product-info">
+            <div class="sku">1192</div>
+            <div class="product-name">Loción Corporal Retardín Spray – 15 ML</div>
+            <div class="product-price">$270.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="retardín spray super load 10 ml">
+          <img class="product-img" src="images/image223.jpg" alt="Retardín Spray Super Load 10 ML">
+          <div class="product-info">
+            <div class="sku">1</div>
+            <div class="product-name">Retardín Spray Super Load 10 ML</div>
+            <div class="product-price">$230.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="lubricante desensiting sta hard crema – 1.05 oz">
+          <img class="product-img" src="images/image211.jpg" alt="Lubricante Desensiting Sta Hard Crema – 1.05 Oz">
+          <div class="product-info">
+            <div class="sku">0308-2</div>
+            <div class="product-name">Lubricante Desensiting Sta Hard Crema – 1.05 Oz</div>
+            <div class="product-price">$378.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="despedida">
+      <h2 class="cat-title">Despedida de Soltera y Juegos</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="popotes rainbow naughty straws">
+          <img class="product-img" src="images/image256.jpg" alt="Popotes Rainbow Naughty Straws">
+          <div class="product-info">
+            <div class="sku">NV.S98</div>
+            <div class="product-name">Popotes Rainbow Naughty Straws</div>
+            <div class="product-price">$227.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="ice tray">
+          <img class="product-img" src="images/image259.png" alt="ICE TRAY">
+          <div class="product-info">
+            <div class="sku">PD6323-11</div>
+            <div class="product-name">ICE TRAY</div>
+            <div class="product-price">$295.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dtp dice">
+          <img class="product-img" src="images/image345.jpg" alt="DTP DICE">
+          <div class="product-info">
+            <div class="sku">BG.R192</div>
+            <div class="product-name">DTP DICE</div>
+            <div class="product-price">$312.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="sex-themed playing card spanish">
+          <img class="product-img" src="images/image347.jpg" alt="Sex-Themed Playing Card Spanish">
+          <div class="product-info">
+            <div class="sku">BG.C20SP</div>
+            <div class="product-name">Sex-Themed Playing Card Spanish</div>
+            <div class="product-price">$312.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="cheers bitches! – party favors">
+          <img class="product-img" src="images/image342.jpg" alt="Cheers Bitches! – Party Favors">
+          <div class="product-info">
+            <div class="sku">BG.R127</div>
+            <div class="product-name">Cheers Bitches! – Party Favors</div>
+            <div class="product-price">$398.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dados glowing oral sex dice">
+          <img class="product-img" src="images/image343.jpg" alt="Dados Glowing Oral Sex Dice">
+          <div class="product-info">
+            <div class="sku">PD6610-00</div>
+            <div class="product-name">Dados Glowing Oral Sex Dice</div>
+            <div class="product-price">$352.50</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="dildos">
+      <h2 class="cat-title">Dildos</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="mini dildo suave 5" pucky pockets - cupy">
+          <img class="product-img" src="images/image344.jpg" alt="Mini Dildo Suave 5&quot; Pucky Pockets - Cupy">
+          <div class="product-info">
+            <div class="sku">ST-2013</div>
+            <div class="product-name">Mini Dildo Suave 5&quot; Pucky Pockets - Cupy</div>
+            <div class="product-price">$147.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="mini dildo suave 4.25" pucky pockets - cury">
+          <img class="product-img" src="images/image351.jpg" alt="Mini Dildo Suave 4.25&quot; Pucky Pockets - Cury">
+          <div class="product-info">
+            <div class="sku">ST-2016</div>
+            <div class="product-name">Mini Dildo Suave 4.25&quot; Pucky Pockets - Cury</div>
+            <div class="product-price">$147.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="mini dildo suave 5.5" pucky pockets - wander">
+          <img class="product-img" src="images/image359.jpg" alt="Mini Dildo Suave 5.5&quot; Pucky Pockets - Wander">
+          <div class="product-info">
+            <div class="sku">ST-2010</div>
+            <div class="product-name">Mini Dildo Suave 5.5&quot; Pucky Pockets - Wander</div>
+            <div class="product-price">$230.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="mini dildo suave 4.25" pucky pockets - sunny">
+          <img class="product-img" src="images/image357.jpg" alt="Mini Dildo Suave 4.25&quot; Pucky Pockets - Sunny">
+          <div class="product-info">
+            <div class="sku">ST-2019</div>
+            <div class="product-name">Mini Dildo Suave 4.25&quot; Pucky Pockets - Sunny</div>
+            <div class="product-price">$147.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="mini dildo suave 5.5" pucky pockets - chuncky">
+          <img class="product-img" src="images/image373.jpg" alt="Mini Dildo Suave 5.5&quot; Pucky Pockets - Chuncky">
+          <div class="product-info">
+            <div class="sku">ST-2011</div>
+            <div class="product-name">Mini Dildo Suave 5.5&quot; Pucky Pockets - Chuncky</div>
+            <div class="product-price">$230.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="mini dildo suave 5.5" pucky pockets - zuly">
+          <img class="product-img" src="images/image370.jpg" alt="Mini Dildo Suave 5.5&quot; Pucky Pockets - Zuly">
+          <div class="product-info">
+            <div class="sku">ST-2012</div>
+            <div class="product-name">Mini Dildo Suave 5.5&quot; Pucky Pockets - Zuly</div>
+            <div class="product-price">$230.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="mini dildo 3.5" mini ricky">
+          <img class="product-img" src="images/image368.png" alt="Mini Dildo 3.5&quot; Mini Ricky">
+          <div class="product-info">
+            <div class="sku">ST-2007</div>
+            <div class="product-name">Mini Dildo 3.5&quot; Mini Ricky</div>
+            <div class="product-price">$90.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="mini dildo 4.25" mini minimi">
+          <img class="product-img" src="images/image371.png" alt="Mini Dildo 4.25&quot; Mini Minimi">
+          <div class="product-info">
+            <div class="sku">ST-2004</div>
+            <div class="product-name">Mini Dildo 4.25&quot; Mini Minimi</div>
+            <div class="product-price">$90.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="mini dildo 4.75" mini corazón">
+          <img class="product-img" src="images/image369.png" alt="Mini Dildo 4.75&quot; Mini Corazón">
+          <div class="product-info">
+            <div class="sku">ST-2003</div>
+            <div class="product-name">Mini Dildo 4.75&quot; Mini Corazón</div>
+            <div class="product-price">$90.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.25" martin">
+          <img class="product-img" src="images/image366.png" alt="Dildo 6.25&quot; Martin">
+          <div class="product-info">
+            <div class="sku">ST-1002</div>
+            <div class="product-name">Dildo 6.25&quot; Martin</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.50" dany">
+          <img class="product-img" src="images/image363.png" alt="Dildo 6.50&quot; Dany">
+          <div class="product-info">
+            <div class="sku">ST-057</div>
+            <div class="product-name">Dildo 6.50&quot; Dany</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.25" alan">
+          <img class="product-img" src="images/image360.png" alt="Dildo 6.25&quot; Alan">
+          <div class="product-info">
+            <div class="sku">ST-1004</div>
+            <div class="product-name">Dildo 6.25&quot; Alan</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.75" delicious">
+          <img class="product-img" src="images/image327.jpg" alt="Dildo 6.75&quot; Delicious">
+          <div class="product-info">
+            <div class="sku">ST-004</div>
+            <div class="product-name">Dildo 6.75&quot; Delicious</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 8.25" champ">
+          <img class="product-img" src="images/image309.jpg" alt="Dildo 8.25&quot; Champ">
+          <div class="product-info">
+            <div class="sku">ST-003</div>
+            <div class="product-name">Dildo 8.25&quot; Champ</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo suave 6.75" mr. cruz">
+          <img class="product-img" src="images/image329.png" alt="Dildo Suave 6.75&quot; Mr. Cruz">
+          <div class="product-info">
+            <div class="sku">ST-031</div>
+            <div class="product-name">Dildo Suave 6.75&quot; Mr. Cruz</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 7" bombon">
+          <img class="product-img" src="images/image323.jpg" alt="Dildo 7&quot; Bombon">
+          <div class="product-info">
+            <div class="sku">ST-005</div>
+            <div class="product-name">Dildo 7&quot; Bombon</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.75" mr. pepe w/balls">
+          <img class="product-img" src="images/image322.jpg" alt="Dildo 6.75&quot; Mr. Pepe W/Balls">
+          <div class="product-info">
+            <div class="sku">ST-036</div>
+            <div class="product-name">Dildo 6.75&quot; Mr. Pepe W/Balls</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6" daddy">
+          <img class="product-img" src="images/image304.png" alt="Dildo 6&quot; Daddy">
+          <div class="product-info">
+            <div class="sku">ST-039</div>
+            <div class="product-name">Dildo 6&quot; Daddy</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 7.6" mr. ricky">
+          <img class="product-img" src="images/image308.jpg" alt="Dildo 7.6&quot; Mr. Ricky">
+          <div class="product-info">
+            <div class="sku">ST-1012</div>
+            <div class="product-name">Dildo 7.6&quot; Mr. Ricky</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 8" venom">
+          <img class="product-img" src="images/image321.png" alt="Dildo 8&quot; Venom">
+          <div class="product-info">
+            <div class="sku">ST-1001</div>
+            <div class="product-name">Dildo 8&quot; Venom</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 7" tierno">
+          <img class="product-img" src="images/image320.png" alt="Dildo 7&quot; Tierno">
+          <div class="product-info">
+            <div class="sku">ST-1013</div>
+            <div class="product-name">Dildo 7&quot; Tierno</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6" ricky">
+          <img class="product-img" src="images/image312.jpg" alt="Dildo 6&quot; Ricky">
+          <div class="product-info">
+            <div class="sku">ST-1014</div>
+            <div class="product-name">Dildo 6&quot; Ricky</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 8" master">
+          <img class="product-img" src="images/image348.jpg" alt="Dildo 8&quot; Master">
+          <div class="product-info">
+            <div class="sku">ST-1015</div>
+            <div class="product-name">Dildo 8&quot; Master</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo mr. lópez">
+          <img class="product-img" src="images/image354.jpg" alt="Dildo Mr. López">
+          <div class="product-info">
+            <div class="sku">ST-1016</div>
+            <div class="product-name">Dildo Mr. López</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.75" boludo">
+          <img class="product-img" src="images/image340.png" alt="Dildo 6.75&quot; Boludo">
+          <div class="product-info">
+            <div class="sku">ST-1003</div>
+            <div class="product-name">Dildo 6.75&quot; Boludo</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 7.5" alex">
+          <img class="product-img" src="images/image337.jpg" alt="Dildo 7.5&quot; Alex">
+          <div class="product-info">
+            <div class="sku">ST-1019</div>
+            <div class="product-name">Dildo 7.5&quot; Alex</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 25 cm black - cubanito">
+          <img class="product-img" src="images/image346.jpg" alt="Dildo 25 CM Black - Cubanito">
+          <div class="product-info">
+            <div class="sku">ST004</div>
+            <div class="product-name">Dildo 25 CM Black - Cubanito</div>
+            <div class="product-price">$347.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 8" mr. perez bicolor">
+          <img class="product-img" src="images/image334.jpg" alt="Dildo 8&quot; Mr. Perez Bicolor">
+          <div class="product-info">
+            <div class="sku">ST-1012-C</div>
+            <div class="product-name">Dildo 8&quot; Mr. Perez Bicolor</div>
+            <div class="product-price">$192.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 8" mr. ricky bicolor">
+          <img class="product-img" src="images/image364.jpg" alt="Dildo 8&quot; Mr. Ricky Bicolor">
+          <div class="product-info">
+            <div class="sku">ST-1012-A</div>
+            <div class="product-name">Dildo 8&quot; Mr. Ricky Bicolor</div>
+            <div class="product-price">$192.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.25 deep soul">
+          <img class="product-img" src="images/image335.jpg" alt="Dildo 6.25 Deep Soul">
+          <div class="product-info">
+            <div class="sku">M011-A</div>
+            <div class="product-name">Dildo 6.25 Deep Soul</div>
+            <div class="product-price">$262.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo atomic bomb">
+          <img class="product-img" src="images/image339.jpg" alt="Dildo Atomic Bomb">
+          <div class="product-info">
+            <div class="sku">M011-D</div>
+            <div class="product-name">Dildo Atomic Bomb</div>
+            <div class="product-price">$262.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.25 electrifying">
+          <img class="product-img" src="images/image338.jpg" alt="Dildo 6.25 Electrifying">
+          <div class="product-info">
+            <div class="sku">M011-E</div>
+            <div class="product-name">Dildo 6.25 Electrifying</div>
+            <div class="product-price">$262.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.25 noisy girl">
+          <img class="product-img" src="images/image285.png" alt="Dildo 6.25 Noisy Girl">
+          <div class="product-info">
+            <div class="sku">M011-B</div>
+            <div class="product-name">Dildo 6.25 Noisy Girl</div>
+            <div class="product-price">$262.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.26 wild trip">
+          <img class="product-img" src="images/image291.jpg" alt="Dildo 6.26 Wild Trip">
+          <div class="product-info">
+            <div class="sku">M011-G</div>
+            <div class="product-name">Dildo 6.26 Wild Trip</div>
+            <div class="product-price">$262.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 8" freaking cool">
+          <img class="product-img" src="images/image284.png" alt="Dildo 8&quot; Freaking Cool">
+          <div class="product-info">
+            <div class="sku">M011-C</div>
+            <div class="product-name">Dildo 8&quot; Freaking Cool</div>
+            <div class="product-price">$262.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="abominable gorgona">
+          <img class="product-img" src="images/image269.png" alt="Abominable Gorgona">
+          <div class="product-info">
+            <div class="sku">STA-004</div>
+            <div class="product-name">Abominable Gorgona</div>
+            <div class="product-price">$374.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="abominable depredador">
+          <img class="product-img" src="images/image271.png" alt="Abominable Depredador">
+          <div class="product-info">
+            <div class="sku">STA-005</div>
+            <div class="product-name">Abominable Depredador</div>
+            <div class="product-price">$298.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="abominable the nutcracker">
+          <img class="product-img" src="images/image277.jpg" alt="Abominable The Nutcracker">
+          <div class="product-info">
+            <div class="sku">SA-005</div>
+            <div class="product-name">Abominable The Nutcracker</div>
+            <div class="product-price">$425.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.25" calamar">
+          <img class="product-img" src="images/image273.png" alt="Dildo 6.25&quot; Calamar">
+          <div class="product-info">
+            <div class="sku">STA-003</div>
+            <div class="product-name">Dildo 6.25&quot; Calamar</div>
+            <div class="product-price">$485.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 5.5" mr. swing">
+          <img class="product-img" src="images/image262.jpg" alt="Dildo 5.5&quot; Mr. Swing">
+          <div class="product-info">
+            <div class="sku">ST-016</div>
+            <div class="product-name">Dildo 5.5&quot; Mr. Swing</div>
+            <div class="product-price">$324.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 5" mr. sweety">
+          <img class="product-img" src="images/image252.jpg" alt="Dildo 5&quot; Mr. Sweety">
+          <div class="product-info">
+            <div class="sku">ST-017</div>
+            <div class="product-name">Dildo 5&quot; Mr. Sweety</div>
+            <div class="product-price">$324.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 7" mr. willy">
+          <img class="product-img" src="images/image281.jpg" alt="Dildo 7&quot; Mr. Willy">
+          <div class="product-info">
+            <div class="sku">ST-019</div>
+            <div class="product-name">Dildo 7&quot; Mr. Willy</div>
+            <div class="product-price">$425.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 6.75" mr. bill">
+          <img class="product-img" src="images/image303.jpg" alt="Dildo 6.75&quot; Mr. Bill">
+          <div class="product-info">
+            <div class="sku">ST-020</div>
+            <div class="product-name">Dildo 6.75&quot; Mr. Bill</div>
+            <div class="product-price">$422.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo importado 6 sensafeel dildo - delight">
+          <img class="product-img" src="images/image296.jpg" alt="Dildo Importado 6 Sensafeel Dildo - Delight">
+          <div class="product-info">
+            <div class="sku">BL-59901</div>
+            <div class="product-name">Dildo Importado 6 Sensafeel Dildo - Delight</div>
+            <div class="product-price">$822.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo importado 6 sensafeel cristalline dildo">
+          <img class="product-img" src="images/image305.jpg" alt="Dildo Importado 6 Sensafeel Cristalline Dildo">
+          <div class="product-info">
+            <div class="sku">BL-51501</div>
+            <div class="product-name">Dildo Importado 6 Sensafeel Cristalline Dildo</div>
+            <div class="product-price">$472.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 7.5” cock with suction cup vanilla">
+          <img class="product-img" src="images/image307.png" alt="Dildo 7.5” Cock With Suction Cup Vanilla">
+          <div class="product-info">
+            <div class="sku">BL-12703</div>
+            <div class="product-name">Dildo 7.5” Cock With Suction Cup Vanilla</div>
+            <div class="product-price">$647.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 7.5” self lubricating dildo - mocha">
+          <img class="product-img" src="images/image341.png" alt="Dildo 7.5” Self Lubricating Dildo - Mocha">
+          <div class="product-info">
+            <div class="sku">BL-12827</div>
+            <div class="product-name">Dildo 7.5” Self Lubricating Dildo - Mocha</div>
+            <div class="product-price">$745.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="double dildo dual estimulador lucky lady">
+          <img class="product-img" src="images/image300.jpg" alt="Double Dildo Dual Estimulador Lucky Lady">
+          <div class="product-info">
+            <div class="sku">ST-26</div>
+            <div class="product-name">Double Dildo Dual Estimulador Lucky Lady</div>
+            <div class="product-price">$218.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="yours 10" - rosa double dildo">
+          <img class="product-img" src="images/image288.png" alt="Yours 10&quot; - Rosa Double Dildo">
+          <div class="product-info">
+            <div class="sku">BL-52010</div>
+            <div class="product-name">Yours 10&quot; - Rosa Double Dildo</div>
+            <div class="product-price">$732.50</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="disfraces">
+      <h2 class="cat-title">Disfraces</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="modelo colegiala curvy">
+          <img class="product-img" src="images/image424.jpg" alt="Modelo Colegiala Curvy">
+          <div class="product-info">
+            <div class="sku">STCL-017</div>
+            <div class="product-name">Modelo Colegiala Curvy</div>
+            <div class="product-price">$504.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo enfermera curvy">
+          <img class="product-img" src="images/image137.jpg" alt="Modelo Enfermera Curvy">
+          <div class="product-info">
+            <div class="sku">STCL-018</div>
+            <div class="product-name">Modelo Enfermera Curvy</div>
+            <div class="product-price">$472.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo enfermera">
+          <img class="product-img" src="images/image384.jpg" alt="Modelo Enfermera">
+          <div class="product-info">
+            <div class="sku">STDL-002</div>
+            <div class="product-name">Modelo Enfermera</div>
+            <div class="product-price">$420.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo monja">
+          <img class="product-img" src="images/image159.jpg" alt="Modelo Monja">
+          <div class="product-info">
+            <div class="sku">STDL-004</div>
+            <div class="product-name">Modelo Monja</div>
+            <div class="product-price">$420.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo policía">
+          <img class="product-img" src="images/image69.jpg" alt="Modelo Policía">
+          <div class="product-info">
+            <div class="sku">STDL-005</div>
+            <div class="product-name">Modelo Policía</div>
+            <div class="product-price">$420.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo coneja">
+          <img class="product-img" src="images/image29.jpg" alt="Modelo Coneja">
+          <div class="product-info">
+            <div class="sku">STDL-012</div>
+            <div class="product-name">Modelo Coneja</div>
+            <div class="product-price">$504.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo colegiala">
+          <img class="product-img" src="images/image353.jpg" alt="Modelo Colegiala">
+          <div class="product-info">
+            <div class="sku">STDL-001</div>
+            <div class="product-name">Modelo Colegiala</div>
+            <div class="product-price">$448.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="antifaz premium a">
+          <img class="product-img" src="images/image_placeholder.jpg" alt="Antifaz Premium A">
+          <div class="product-info">
+            <div class="sku">ST077</div>
+            <div class="product-name">Antifaz Premium A</div>
+            <div class="product-price">$165.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="antifaz premium b">
+          <img class="product-img" src="images/image_placeholder.jpg" alt="Antifaz Premium B">
+          <div class="product-info">
+            <div class="sku">ST078</div>
+            <div class="product-name">Antifaz Premium B</div>
+            <div class="product-price">$165.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="antifaz premium c">
+          <img class="product-img" src="images/image_placeholder.jpg" alt="Antifaz Premium C">
+          <div class="product-info">
+            <div class="sku">ST079</div>
+            <div class="product-name">Antifaz Premium C</div>
+            <div class="product-price">$165.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="antifaz premium d">
+          <img class="product-img" src="images/image_placeholder.jpg" alt="Antifaz Premium D">
+          <div class="product-info">
+            <div class="sku">ST080</div>
+            <div class="product-name">Antifaz Premium D</div>
+            <div class="product-price">$165.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="feromonas">
+      <h2 class="cat-title">Feromonas</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="feromona concentrada con aroma unisex -10ml sexto sentido">
+          <img class="product-img" src="images/image217.png" alt="Feromona Concentrada Con Aroma Unisex -10ML Sexto Sentido">
+          <div class="product-info">
+            <div class="sku">STSS-01</div>
+            <div class="product-name">Feromona Concentrada Con Aroma Unisex -10ML Sexto Sentido</div>
+            <div class="product-price">$160.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromona concentrado sin aroma – unisex 10 ml sexto sentido">
+          <img class="product-img" src="images/image213.jpg" alt="Feromona Concentrado sin aroma – Unisex 10 ML Sexto Sentido">
+          <div class="product-info">
+            <div class="sku">STSS-04</div>
+            <div class="product-name">Feromona Concentrado sin aroma – Unisex 10 ML Sexto Sentido</div>
+            <div class="product-price">$160.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para mujer – bright – 10ml">
+          <img class="product-img" src="images/image209.jpg" alt="Feromonas Sexto Sentido para Mujer – Bright – 10ML">
+          <div class="product-info">
+            <div class="sku">STSS-12</div>
+            <div class="product-name">Feromonas Sexto Sentido para Mujer – Bright – 10ML</div>
+            <div class="product-price">$172.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para mujer – miss – 10ml">
+          <img class="product-img" src="images/image216.jpg" alt="Feromonas Sexto Sentido para Mujer – Miss – 10ML">
+          <div class="product-info">
+            <div class="sku">STSS-11</div>
+            <div class="product-name">Feromonas Sexto Sentido para Mujer – Miss – 10ML</div>
+            <div class="product-price">$172.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sentido para hombre – many – 10ml">
+          <img class="product-img" src="images/image210.jpg" alt="Feromonas Sentido para Hombre – Many – 10ML">
+          <div class="product-info">
+            <div class="sku">STSS-14</div>
+            <div class="product-name">Feromonas Sentido para Hombre – Many – 10ML</div>
+            <div class="product-price">$172.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para mujer – light – 10ml">
+          <img class="product-img" src="images/image245.jpg" alt="Feromonas Sexto Sentido para Mujer – Light – 10ML">
+          <div class="product-info">
+            <div class="sku">STSS-13</div>
+            <div class="product-name">Feromonas Sexto Sentido para Mujer – Light – 10ML</div>
+            <div class="product-price">$172.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para hombre – coste – 10ml">
+          <img class="product-img" src="images/image250.jpg" alt="Feromonas Sexto Sentido para Hombre – Coste – 10ML">
+          <div class="product-info">
+            <div class="sku">STSS-15</div>
+            <div class="product-name">Feromonas Sexto Sentido para Hombre – Coste – 10ML</div>
+            <div class="product-price">$179.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para hombre – eternity – 10ml">
+          <img class="product-img" src="images/image246.jpg" alt="Feromonas Sexto Sentido para Hombre – Eternity – 10ML">
+          <div class="product-info">
+            <div class="sku">STSS-16</div>
+            <div class="product-name">Feromonas Sexto Sentido para Hombre – Eternity – 10ML</div>
+            <div class="product-price">$172.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para mujer – miss – c0ml">
+          <img class="product-img" src="images/image244.jpg" alt="Feromonas Sexto Sentido para Mujer – Miss – C0ML">
+          <div class="product-info">
+            <div class="sku">STSS-06</div>
+            <div class="product-name">Feromonas Sexto Sentido para Mujer – Miss – C0ML</div>
+            <div class="product-price">$347.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para mujer">
+          <img class="product-img" src="images/image249.png" alt="Feromonas Sexto Sentido para Mujer">
+          <div class="product-info">
+            <div class="sku">STSS-03</div>
+            <div class="product-name">Feromonas Sexto Sentido para Mujer</div>
+            <div class="product-price">$347.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para mujer – bright – c0ml">
+          <img class="product-img" src="images/image248.jpg" alt="Feromonas Sexto Sentido para Mujer – Bright – C0ML">
+          <div class="product-info">
+            <div class="sku">STSS-07</div>
+            <div class="product-name">Feromonas Sexto Sentido para Mujer – Bright – C0ML</div>
+            <div class="product-price">$347.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para hombre – coste – c0ml">
+          <img class="product-img" src="images/image239.jpg" alt="Feromonas Sexto Sentido para Hombre – Coste – C0ML">
+          <div class="product-info">
+            <div class="sku">STSS-09</div>
+            <div class="product-name">Feromonas Sexto Sentido para Hombre – Coste – C0ML</div>
+            <div class="product-price">$347.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="feromonas sexto sentido para hombre – eternal – c0ml">
+          <img class="product-img" src="images/image240.jpg" alt="Feromonas Sexto Sentido para Hombre – Eternal – C0ML">
+          <div class="product-info">
+            <div class="sku">STSS-10</div>
+            <div class="product-name">Feromonas Sexto Sentido para Hombre – Eternal – C0ML</div>
+            <div class="product-price">$347.50</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="fundas">
+      <h2 class="cat-title">Fundas y Extensores</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="dildo extension 6" penis sleeve">
+          <img class="product-img" src="images/image237.jpg" alt="Dildo Extension 6&quot; Penis Sleeve">
+          <div class="product-info">
+            <div class="sku">ST-3001</div>
+            <div class="product-name">Dildo Extension 6&quot; Penis Sleeve</div>
+            <div class="product-price">$120.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo extension 8" penis sleeve">
+          <img class="product-img" src="images/image237.jpg" alt="Dildo Extension 8&quot; Penis Sleeve">
+          <div class="product-info">
+            <div class="sku">ST-3002</div>
+            <div class="product-name">Dildo Extension 8&quot; Penis Sleeve</div>
+            <div class="product-price">$120.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="extensor cock xtender performance">
+          <img class="product-img" src="images/image418.png" alt="Extensor Cock Xtender Performance">
+          <div class="product-info">
+            <div class="sku">BL26996</div>
+            <div class="product-name">Extensor Cock Xtender Performance</div>
+            <div class="product-price">$792.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fundas y extensiones enter the dragon">
+          <img class="product-img" src="images/image316.png" alt="Fundas y Extensiones Enter The Dragon">
+          <div class="product-info">
+            <div class="sku">BL-04312</div>
+            <div class="product-name">Fundas y Extensiones Enter The Dragon</div>
+            <div class="product-price">$422.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="stay hard cock sleeve 04 clear">
+          <img class="product-img" src="images/image389.png" alt="Stay Hard Cock Sleeve 04 Clear">
+          <div class="product-info">
+            <div class="sku">BL-00402</div>
+            <div class="product-name">Stay Hard Cock Sleeve 04 Clear</div>
+            <div class="product-price">$170.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="stay hard cock sleeve 03 clear">
+          <img class="product-img" src="images/image9.jpg" alt="Stay Hard Cock Sleeve 03 Clear">
+          <div class="product-info">
+            <div class="sku">BL-00312</div>
+            <div class="product-name">Stay Hard Cock Sleeve 03 Clear</div>
+            <div class="product-price">$170.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="stay hard cock sleeve kit clear">
+          <img class="product-img" src="images/image18.jpg" alt="Stay Hard Cock Sleeve Kit Clear">
+          <div class="product-info">
+            <div class="sku">BL-60612</div>
+            <div class="product-name">Stay Hard Cock Sleeve Kit Clear</div>
+            <div class="product-price">$365.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="extensor spicy enhancer">
+          <img class="product-img" src="images/image121.jpg" alt="Extensor Spicy Enhancer">
+          <div class="product-info">
+            <div class="sku">SL004</div>
+            <div class="product-name">Extensor Spicy Enhancer</div>
+            <div class="product-price">$226.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="clear sm sex sleeve">
+          <img class="product-img" src="images/image116.jpg" alt="Clear SM Sex Sleeve">
+          <div class="product-info">
+            <div class="sku">AE288-CLEAR</div>
+            <div class="product-name">Clear SM Sex Sleeve</div>
+            <div class="product-price">$477.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="penis vibro sleeve sm con bala">
+          <img class="product-img" src="images/image31.jpg" alt="Penis Vibro Sleeve SM con Bala">
+          <div class="product-info">
+            <div class="sku">AE336</div>
+            <div class="product-name">Penis Vibro Sleeve SM con Bala</div>
+            <div class="product-price">$719.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="2 inch clear extender sleeve">
+          <img class="product-img" src="images/image180.png" alt="2 Inch Clear Extender Sleeve">
+          <div class="product-info">
+            <div class="sku">AE858</div>
+            <div class="product-name">2 Inch Clear Extender Sleeve</div>
+            <div class="product-price">$920.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="cristal penis sleeve model a">
+          <img class="product-img" src="images/image8.jpg" alt="Cristal Penis Sleeve Model A">
+          <div class="product-info">
+            <div class="sku">SL012A</div>
+            <div class="product-name">Cristal Penis Sleeve Model A</div>
+            <div class="product-price">$255.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="cristal penis sleeve model b">
+          <img class="product-img" src="images/image422.png" alt="Cristal Penis Sleeve Model B">
+          <div class="product-info">
+            <div class="sku">SL012B</div>
+            <div class="product-name">Cristal Penis Sleeve Model B</div>
+            <div class="product-price">$255.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="cristal penis sleeve model c">
+          <img class="product-img" src="images/image206.png" alt="Cristal Penis Sleeve Model C">
+          <div class="product-info">
+            <div class="sku">SL012C</div>
+            <div class="product-name">Cristal Penis Sleeve Model C</div>
+            <div class="product-price">$255.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="cristal penis sleeve model d">
+          <img class="product-img" src="images/image261.png" alt="Cristal Penis Sleeve Model D">
+          <div class="product-info">
+            <div class="sku">SL012D</div>
+            <div class="product-name">Cristal Penis Sleeve Model D</div>
+            <div class="product-price">$255.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="penis vibro sleeve with bullet">
+          <img class="product-img" src="images/image102.jpg" alt="PENIS VIBRO SLEEVE WITH BULLET">
+          <div class="product-info">
+            <div class="sku">PD1991-14</div>
+            <div class="product-name">PENIS VIBRO SLEEVE WITH BULLET</div>
+            <div class="product-price">$587.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="pleasure couples kit">
+          <img class="product-img" src="images/image84.jpg" alt="PLEASURE COUPLES KIT">
+          <div class="product-info">
+            <div class="sku">PD1992-12</div>
+            <div class="product-name">PLEASURE COUPLES KIT</div>
+            <div class="product-price">$950.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="magic juego de 4 penes magic soft &amp; stretchy tickler">
+          <img class="product-img" src="images/image151.jpg" alt="Magic Juego de 4 Penes Magic Soft &amp;amp; Stretchy Tickler">
+          <div class="product-info">
+            <div class="sku">3228</div>
+            <div class="product-name">Magic Juego de 4 Penes Magic Soft &amp;amp; Stretchy Tickler</div>
+            <div class="product-price">$945.50</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="pluganal">
+      <h2 class="cat-title">Juguetes Anales</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="plug anal plata chico gema redonda">
+          <img class="product-img" src="images/image362.jpg" alt="PLUG ANAL PLATA CHICO GEMA REDONDA">
+          <div class="product-info">
+            <div class="sku">RY-001</div>
+            <div class="product-name">PLUG ANAL PLATA CHICO GEMA REDONDA</div>
+            <div class="product-price">$188.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="plug anal plata mediano gema corazón">
+          <img class="product-img" src="images/image12.jpg" alt="PLUG ANAL PLATA MEDIANO GEMA CORAZÓN">
+          <div class="product-info">
+            <div class="sku">RU-015</div>
+            <div class="product-name">PLUG ANAL PLATA MEDIANO GEMA CORAZÓN</div>
+            <div class="product-price">$472.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="plug anal plata gema corazón morada grande">
+          <img class="product-img" src="images/image400.jpg" alt="PLUG ANAL PLATA GEMA CORAZÓN MORADA GRANDE">
+          <div class="product-info">
+            <div class="sku">RU-015</div>
+            <div class="product-name">PLUG ANAL PLATA GEMA CORAZÓN MORADA GRANDE</div>
+            <div class="product-price">$745.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="plug anal plata mediano gema grande">
+          <img class="product-img" src="images/image106.jpg" alt="PLUG ANAL PLATA MEDIANO GEMA GRANDE">
+          <div class="product-info">
+            <div class="sku">RU-019</div>
+            <div class="product-name">PLUG ANAL PLATA MEDIANO GEMA GRANDE</div>
+            <div class="product-price">$580.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="plug anal rosa cola de ardilla">
+          <img class="product-img" src="images/image150.jpg" alt="PLUG ANAL ROSA COLA DE ARDILLA">
+          <div class="product-info">
+            <div class="sku">RY-068T004P</div>
+            <div class="product-name">PLUG ANAL ROSA COLA DE ARDILLA</div>
+            <div class="product-price">$459.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="plug anal cola de zorro blanco">
+          <img class="product-img" src="images/image45.png" alt="PLUG ANAL COLA DE ZORRO BLANCO">
+          <div class="product-info">
+            <div class="sku">RYS-509</div>
+            <div class="product-name">PLUG ANAL COLA DE ZORRO BLANCO</div>
+            <div class="product-price">$475.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="plug anal cola de zorro azul">
+          <img class="product-img" src="images/image406.jpg" alt="PLUG ANAL COLA DE ZORRO AZUL">
+          <div class="product-info">
+            <div class="sku">RYS-514</div>
+            <div class="product-name">PLUG ANAL COLA DE ZORRO AZUL</div>
+            <div class="product-price">$475.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="plug anal rabbit tail plug">
+          <img class="product-img" src="images/image224.jpg" alt="PLUG ANAL Rabbit Tail Plug">
+          <div class="product-info">
+            <div class="sku">BL-59225</div>
+            <div class="product-name">PLUG ANAL Rabbit Tail Plug</div>
+            <div class="product-price">$673.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anal yours basic anal pleaser">
+          <img class="product-img" src="images/image25.jpg" alt="Anal Yours Basic Anal Pleaser">
+          <div class="product-info">
+            <div class="sku">BL-24110</div>
+            <div class="product-name">Anal Yours Basic Anal Pleaser</div>
+            <div class="product-price">$300.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anal yours basic anal con control">
+          <img class="product-img" src="images/image40.jpg" alt="Anal Yours Basic Anal Con Control">
+          <div class="product-info">
+            <div class="sku">BL-10602</div>
+            <div class="product-name">Anal Yours Basic Anal Con Control</div>
+            <div class="product-price">$620.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="basic anal plug cosmic small">
+          <img class="product-img" src="images/image430.jpg" alt="Basic Anal Plug Cosmic Small">
+          <div class="product-info">
+            <div class="sku">BL-18601</div>
+            <div class="product-name">Basic Anal Plug Cosmic Small</div>
+            <div class="product-price">$275.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="basic anal plug cosmic medium">
+          <img class="product-img" src="images/image324.jpg" alt="Basic Anal Plug Cosmic Medium">
+          <div class="product-info">
+            <div class="sku">BL-18701</div>
+            <div class="product-name">Basic Anal Plug Cosmic Medium</div>
+            <div class="product-price">$323.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal temptasia – bling plug small black">
+          <img class="product-img" src="images/image187.jpg" alt="Juguete Anal Temptasia – Bling Plug Small Black">
+          <div class="product-info">
+            <div class="sku">BL-95831</div>
+            <div class="product-name">Juguete Anal Temptasia – Bling Plug Small Black</div>
+            <div class="product-price">$387.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal temptasia – bling plug small">
+          <img class="product-img" src="images/image127.jpg" alt="Juguete Anal Temptasia – Bling Plug Small">
+          <div class="product-info">
+            <div class="sku">BL-95835</div>
+            <div class="product-name">Juguete Anal Temptasia – Bling Plug Small</div>
+            <div class="product-price">$397.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal temptasia – slut plug 2.5"">
+          <img class="product-img" src="images/image310.png" alt="Juguete Anal Temptasia – Slut Plug 2.5&quot;">
+          <div class="product-info">
+            <div class="sku">BL-81205</div>
+            <div class="product-name">Juguete Anal Temptasia – Slut Plug 2.5&quot;</div>
+            <div class="product-price">$459.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal temptasia – bling plug medium">
+          <img class="product-img" src="images/image112.jpg" alt="Juguete Anal Temptasia – Bling Plug Medium">
+          <div class="product-info">
+            <div class="sku">BL-95845</div>
+            <div class="product-name">Juguete Anal Temptasia – Bling Plug Medium</div>
+            <div class="product-price">$442.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal temptasia fuck me plug 1.75"">
+          <img class="product-img" src="images/image66.png" alt="Juguete Anal Temptasia Fuck Me Plug 1.75&quot;">
+          <div class="product-info">
+            <div class="sku">BL-95725</div>
+            <div class="product-name">Juguete Anal Temptasia Fuck Me Plug 1.75&quot;</div>
+            <div class="product-price">$480.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal plug small light up!">
+          <img class="product-img" src="images/image67.jpg" alt="Juguete Anal Plug Small Light Up!">
+          <div class="product-info">
+            <div class="sku">AG755</div>
+            <div class="product-name">Juguete Anal Plug Small Light Up!</div>
+            <div class="product-price">$596.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal beginner's butt plug">
+          <img class="product-img" src="images/image236.jpg" alt="Juguete Anal Beginner's Butt Plug">
+          <div class="product-info">
+            <div class="sku">PD4426-23</div>
+            <div class="product-name">Juguete Anal Beginner's Butt Plug</div>
+            <div class="product-price">$420.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal mini luv plug">
+          <img class="product-img" src="images/image101.jpg" alt="Juguete Anal Mini Luv Plug">
+          <div class="product-info">
+            <div class="sku">PD4436-23</div>
+            <div class="product-name">Juguete Anal Mini Luv Plug</div>
+            <div class="product-price">$870.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal hand plug blown glass small">
+          <img class="product-img" src="images/image204.png" alt="Juguete Anal Hand Plug Blown Glass Small">
+          <div class="product-info">
+            <div class="sku">BL-95831</div>
+            <div class="product-name">Juguete Anal Hand Plug Blown Glass Small</div>
+            <div class="product-price">$880.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="anal yours basic medium 1.5">
+          <img class="product-img" src="images/image332.png" alt="Anal Yours Basic Medium 1.5">
+          <div class="product-info">
+            <div class="sku">BL-18715</div>
+            <div class="product-name">Anal Yours Basic Medium 1.5</div>
+            <div class="product-price">$230.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal plug adventures">
+          <img class="product-img" src="images/image318.jpg" alt="Juguete Anal Plug Adventures">
+          <div class="product-info">
+            <div class="sku">BL-10495</div>
+            <div class="product-name">Juguete Anal Plug Adventures</div>
+            <div class="product-price">$459.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal plug smol rechargeable vibrating pink">
+          <img class="product-img" src="images/image299.jpg" alt="Juguete Anal Plug Smol Rechargeable vibrating Pink">
+          <div class="product-info">
+            <div class="sku">PD4780-23</div>
+            <div class="product-name">Juguete Anal Plug Smol Rechargeable vibrating Pink</div>
+            <div class="product-price">$1,075.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal plug small weighted">
+          <img class="product-img" src="images/image328.jpg" alt="Juguete Anal Plug Small Weighted">
+          <div class="product-info">
+            <div class="sku">PD4780-23</div>
+            <div class="product-name">Juguete Anal Plug Small Weighted</div>
+            <div class="product-price">$940.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal dark droplests 3 piece">
+          <img class="product-img" src="images/image26.jpg" alt="Juguete Anal Dark Droplests 3 piece">
+          <div class="product-info">
+            <div class="sku">AG377</div>
+            <div class="product-name">Juguete Anal Dark Droplests 3 piece</div>
+            <div class="product-price">$515.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal vibrating c-ring 1.5"">
+          <img class="product-img" src="images/image61.jpg" alt="Juguete Anal Vibrating C-Ring 1.5&quot;">
+          <div class="product-info">
+            <div class="sku">BL-01705</div>
+            <div class="product-name">Juguete Anal Vibrating C-Ring 1.5&quot;</div>
+            <div class="product-price">$409.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal jet stealth 6.5"">
+          <img class="product-img" src="images/image24.png" alt="Juguete Anal Jet Stealth 6.5&quot;">
+          <div class="product-info">
+            <div class="sku">BL-15815</div>
+            <div class="product-name">Juguete Anal Jet Stealth 6.5&quot;</div>
+            <div class="product-price">$655.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal tapon mini con arnes">
+          <img class="product-img" src="images/image14.jpg" alt="Juguete Anal Tapon Mini con Arnes">
+          <div class="product-info">
+            <div class="sku">SE-1245-05-3</div>
+            <div class="product-name">Juguete Anal Tapon Mini con Arnes</div>
+            <div class="product-price">$900.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="juguete anal tapon grande con arnes">
+          <img class="product-img" src="images/image15.jpg" alt="Juguete Anal Tapon Grande Con Arnes">
+          <div class="product-info">
+            <div class="sku">SE-1245-25-3</div>
+            <div class="product-name">Juguete Anal Tapon Grande Con Arnes</div>
+            <div class="product-price">$1,029.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="panties crotchless pleasure pearls butt plug size kl-2xl">
+          <img class="product-img" src="images/image46.jpg" alt="Panties Crotchless Pleasure Pearls Butt Plug SIZE KL-2XL">
+          <div class="product-info">
+            <div class="sku">PD4828-23</div>
+            <div class="product-name">Panties Crotchless Pleasure Pearls Butt Plug SIZE KL-2XL</div>
+            <div class="product-price">$1,115.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="panties crotchless secret gem sizes s-l">
+          <img class="product-img" src="images/image58.jpg" alt="Panties Crotchless Secret Gem Sizes S-L">
+          <div class="product-info">
+            <div class="sku">PD4825-23</div>
+            <div class="product-name">Panties Crotchless Secret Gem Sizes S-L</div>
+            <div class="product-price">$920.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="panties crotchless love garter size s-l">
+          <img class="product-img" src="images/image87.jpg" alt="Panties Crotchless Love Garter SIZE S-L">
+          <div class="product-info">
+            <div class="sku">PD4823-23</div>
+            <div class="product-name">Panties Crotchless Love Garter SIZE S-L</div>
+            <div class="product-price">$980.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="panties crotchless secret gem sizes xl-2xl">
+          <img class="product-img" src="images/image87.jpg" alt="Panties Crotchless Secret Gem Sizes XL-2XL">
+          <div class="product-info">
+            <div class="sku">PD4826-23</div>
+            <div class="product-name">Panties Crotchless Secret Gem Sizes XL-2XL</div>
+            <div class="product-price">$980.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="b yours basic beads pink">
+          <img class="product-img" src="images/image114.jpg" alt="B Yours Basic Beads Pink">
+          <div class="product-info">
+            <div class="sku">BL-23110</div>
+            <div class="product-name">B Yours Basic Beads Pink</div>
+            <div class="product-price">$155.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador anal bumbbss">
+          <img class="product-img" src="images/image146.jpg" alt="Vibrador Anal Bumbbss">
+          <div class="product-info">
+            <div class="sku">GM-031</div>
+            <div class="product-name">Vibrador Anal Bumbbss</div>
+            <div class="product-price">$392.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador anal bang anal beads anal">
+          <img class="product-img" src="images/image88.png" alt="Vibrador Anal Bang Anal Beads Anal">
+          <div class="product-info">
+            <div class="sku">AG614</div>
+            <div class="product-name">Vibrador Anal Bang Anal Beads Anal</div>
+            <div class="product-price">$1,330.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="entrenamiento anal ee73-774-01">
+          <img class="product-img" src="images/image63.jpg" alt="Entrenamiento Anal EE73-774-01">
+          <div class="product-info">
+            <div class="sku">EE73-774-01</div>
+            <div class="product-name">Entrenamiento Anal EE73-774-01</div>
+            <div class="product-price">$1,157.50</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="lenceria">
+      <h2 class="cat-title">LencerÃ­a Fina</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="tanga de microfibra">
+          <img class="product-img" src="images/image27.jpg" alt="Tanga De Microfibra">
+          <div class="product-info">
+            <div class="sku">Lencería: 124</div>
+            <div class="product-name">Tanga De Microfibra</div>
+            <div class="product-price">$80.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tanga de microfibra y encaje">
+          <img class="product-img" src="images/image311.jpg" alt="Tanga De Microfibra y Encaje">
+          <div class="product-info">
+            <div class="sku">Lencería: 070</div>
+            <div class="product-name">Tanga De Microfibra y Encaje</div>
+            <div class="product-price">$80.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tanga de encaje con abertura">
+          <img class="product-img" src="images/image17.jpg" alt="Tanga De Encaje Con Abertura">
+          <div class="product-info">
+            <div class="sku">Lencería: 128</div>
+            <div class="product-name">Tanga De Encaje Con Abertura</div>
+            <div class="product-price">$80.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="calzón de redecilla con corte de encaje">
+          <img class="product-img" src="images/image376.jpg" alt="Calzón De Redecilla Con Corte de Encaje">
+          <div class="product-info">
+            <div class="sku">Lencería: 149</div>
+            <div class="product-name">Calzón De Redecilla Con Corte de Encaje</div>
+            <div class="product-price">$80.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="calzón de microfibra con corte de encaje">
+          <img class="product-img" src="images/image107.jpg" alt="Calzón De Microfibra Con Corte de Encaje">
+          <div class="product-info">
+            <div class="sku">Lencería: 160</div>
+            <div class="product-name">Calzón De Microfibra Con Corte de Encaje</div>
+            <div class="product-price">$80.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tanga de encaje">
+          <img class="product-img" src="images/image1.jpg" alt="Tanga De Encaje">
+          <div class="product-info">
+            <div class="sku">Lencería: 157</div>
+            <div class="product-name">Tanga De Encaje</div>
+            <div class="product-price">$80.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="red fence net mesh fishnet thigh stocking">
+          <img class="product-img" src="images/image108.jpg" alt="Red Fence Net Mesh Fishnet Thigh Stocking">
+          <div class="product-info">
+            <div class="sku">H20576</div>
+            <div class="product-name">Red Fence Net Mesh Fishnet Thigh Stocking</div>
+            <div class="product-price">$255.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fishnet pantyhose">
+          <img class="product-img" src="images/image352.jpg" alt="Fishnet Pantyhose">
+          <div class="product-info">
+            <div class="sku">H3578-1</div>
+            <div class="product-name">Fishnet Pantyhose</div>
+            <div class="product-price">$112.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="sexy floral fishnet pantyhose">
+          <img class="product-img" src="images/image32.jpg" alt="Sexy Floral Fishnet Pantyhose">
+          <div class="product-info">
+            <div class="sku">H3582-1</div>
+            <div class="product-name">Sexy Floral Fishnet Pantyhose</div>
+            <div class="product-price">$255.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="halter sexy floral patterns hollow out netted tights bodystocking">
+          <img class="product-img" src="images/image92.jpg" alt="Halter Sexy Floral Patterns Hollow Out Netted Tights Bodystocking">
+          <div class="product-info">
+            <div class="sku">H3504</div>
+            <div class="product-name">Halter Sexy Floral Patterns Hollow Out Netted Tights Bodystocking</div>
+            <div class="product-price">$454.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo tali">
+          <img class="product-img" src="images/image20.jpg" alt="Modelo Tali">
+          <div class="product-info">
+            <div class="sku">STCL-001</div>
+            <div class="product-name">Modelo Tali</div>
+            <div class="product-price">$267.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo eva">
+          <img class="product-img" src="images/image427.jpg" alt="Modelo Eva">
+          <div class="product-info">
+            <div class="sku">STCL-004</div>
+            <div class="product-name">Modelo Eva</div>
+            <div class="product-price">$310.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo charlotte">
+          <img class="product-img" src="images/image104.jpg" alt="Modelo Charlotte">
+          <div class="product-info">
+            <div class="sku">STCL-005</div>
+            <div class="product-name">Modelo Charlotte</div>
+            <div class="product-price">$360.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo monet">
+          <img class="product-img" src="images/image214.jpg" alt="Modelo Monet">
+          <div class="product-info">
+            <div class="sku">STCL-006</div>
+            <div class="product-name">Modelo Monet</div>
+            <div class="product-price">$350.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo bella">
+          <img class="product-img" src="images/image381.jpg" alt="Modelo Bella">
+          <div class="product-info">
+            <div class="sku"></div>
+            <div class="product-name">Modelo Bella</div>
+            <div class="product-price">$380.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo jann">
+          <img class="product-img" src="images/image390.jpg" alt="Modelo Jann">
+          <div class="product-info">
+            <div class="sku">STCL-008</div>
+            <div class="product-name">Modelo Jann</div>
+            <div class="product-price">$470.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo susan">
+          <img class="product-img" src="images/image402.jpg" alt="Modelo Susan">
+          <div class="product-info">
+            <div class="sku">STCL-009</div>
+            <div class="product-name">Modelo Susan</div>
+            <div class="product-price">$357.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo clariss">
+          <img class="product-img" src="images/image358.png" alt="Modelo Clariss">
+          <div class="product-info">
+            <div class="sku">STCL-010</div>
+            <div class="product-name">Modelo Clariss</div>
+            <div class="product-price">$340.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo yulia">
+          <img class="product-img" src="images/image408.jpg" alt="Modelo Yulia">
+          <div class="product-info">
+            <div class="sku">STCL-013</div>
+            <div class="product-name">Modelo Yulia</div>
+            <div class="product-price">$372.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo giselle">
+          <img class="product-img" src="images/image10.jpg" alt="Modelo Giselle">
+          <div class="product-info">
+            <div class="sku">STCL-015</div>
+            <div class="product-name">Modelo Giselle</div>
+            <div class="product-price">$422.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo emily">
+          <img class="product-img" src="images/image133.jpg" alt="Modelo Emily">
+          <div class="product-info">
+            <div class="sku">STCL-023</div>
+            <div class="product-name">Modelo Emily</div>
+            <div class="product-price">$472.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo luna">
+          <img class="product-img" src="images/image231.jpg" alt="Modelo Luna">
+          <div class="product-info">
+            <div class="sku">STCL-024</div>
+            <div class="product-name">Modelo Luna</div>
+            <div class="product-price">$397.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo lilith">
+          <img class="product-img" src="images/image39.jpg" alt="Modelo Lilith">
+          <div class="product-info">
+            <div class="sku">STCL-025</div>
+            <div class="product-name">Modelo Lilith</div>
+            <div class="product-price">$447.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo camile">
+          <img class="product-img" src="images/image356.jpg" alt="Modelo Camile">
+          <div class="product-info">
+            <div class="sku">STCL-029</div>
+            <div class="product-name">Modelo Camile</div>
+            <div class="product-price">$445.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo kira negro">
+          <img class="product-img" src="images/image53.jpg" alt="Modelo Kira Negro">
+          <div class="product-info">
+            <div class="sku">STCL-033</div>
+            <div class="product-name">Modelo Kira Negro</div>
+            <div class="product-price">$307.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo cecilia">
+          <img class="product-img" src="images/image110.jpg" alt="Modelo Cecilia">
+          <div class="product-info">
+            <div class="sku">STCL-034</div>
+            <div class="product-name">Modelo Cecilia</div>
+            <div class="product-price">$310.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo anabel">
+          <img class="product-img" src="images/image93.jpg" alt="Modelo Anabel">
+          <div class="product-info">
+            <div class="sku">STCL-035</div>
+            <div class="product-name">Modelo Anabel</div>
+            <div class="product-price">$297.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo natalie">
+          <img class="product-img" src="images/image260.jpg" alt="Modelo Natalie">
+          <div class="product-info">
+            <div class="sku">STCL-036</div>
+            <div class="product-name">Modelo Natalie</div>
+            <div class="product-price">$370.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo abril">
+          <img class="product-img" src="images/image407.jpg" alt="Modelo Abril">
+          <div class="product-info">
+            <div class="sku">STCL-037</div>
+            <div class="product-name">Modelo Abril</div>
+            <div class="product-price">$310.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo bianca curvy">
+          <img class="product-img" src="images/image99.jpg" alt="Modelo Bianca Curvy">
+          <div class="product-info">
+            <div class="sku">STCL-021</div>
+            <div class="product-name">Modelo Bianca Curvy</div>
+            <div class="product-price">$472.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo dhalia curvy">
+          <img class="product-img" src="images/image96.jpg" alt="Modelo Dhalia Curvy">
+          <div class="product-info">
+            <div class="sku">STCL-020</div>
+            <div class="product-name">Modelo Dhalia Curvy</div>
+            <div class="product-price">$472.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo lynette curvy">
+          <img class="product-img" src="images/image122.jpg" alt="Modelo Lynette Curvy">
+          <div class="product-info">
+            <div class="sku">STCL-022</div>
+            <div class="product-name">Modelo Lynette Curvy</div>
+            <div class="product-price">$472.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo magnus">
+          <img class="product-img" src="images/image28.jpg" alt="Modelo Magnus">
+          <div class="product-info">
+            <div class="sku">STIG-001</div>
+            <div class="product-name">Modelo Magnus</div>
+            <div class="product-price">$242.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo severus">
+          <img class="product-img" src="images/image2.jpg" alt="Modelo Severus">
+          <div class="product-info">
+            <div class="sku">STIG-003</div>
+            <div class="product-name">Modelo Severus</div>
+            <div class="product-price">$247.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo dante">
+          <img class="product-img" src="images/image3.jpg" alt="Modelo Dante">
+          <div class="product-info">
+            <div class="sku">STIG-004</div>
+            <div class="product-name">Modelo Dante</div>
+            <div class="product-price">$492.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="modelo smoking">
+          <img class="product-img" src="images/image174.jpg" alt="Modelo Smoking">
+          <div class="product-info">
+            <div class="sku">STIG-007</div>
+            <div class="product-name">Modelo Smoking</div>
+            <div class="product-price">$372.50</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="lubricantes">
+      <h2 class="cat-title">Lubricantes y Geles</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="antibacterial tout tempts – toy cleaner 30ml">
+          <img class="product-img" src="images/image42.png" alt="Antibacterial Tout Tempts – Toy Cleaner 30ml">
+          <div class="product-info">
+            <div class="sku">LST-026</div>
+            <div class="product-name">Antibacterial Tout Tempts – Toy Cleaner 30ml</div>
+            <div class="product-price">$65.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – lub naturel premium – 30ml">
+          <img class="product-img" src="images/image317.jpg" alt="Tout Temps – Lub Naturel Premium – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-009</div>
+            <div class="product-name">Tout Temps – Lub Naturel Premium – 30ML</div>
+            <div class="product-price">$80.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – frutas de la pasión – 30ml">
+          <img class="product-img" src="images/image162.jpg" alt="Tout Temps – Frutas de la Pasión – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-001</div>
+            <div class="product-name">Tout Temps – Frutas de la Pasión – 30ML</div>
+            <div class="product-price">$90.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – lub anale – 30ml">
+          <img class="product-img" src="images/image135.jpg" alt="Tout Temps – Lub Anale – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-008</div>
+            <div class="product-name">Tout Temps – Lub Anale – 30ML</div>
+            <div class="product-price">$99.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – chocolate 30ml">
+          <img class="product-img" src="images/image194.jpg" alt="Tout Temps – Chocolate 30ML">
+          <div class="product-info">
+            <div class="sku">LST-002</div>
+            <div class="product-name">Tout Temps – Chocolate 30ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – cereza 30ml">
+          <img class="product-img" src="images/image72.jpg" alt="Tout Temps – Cereza 30ML">
+          <div class="product-info">
+            <div class="sku">LST-003</div>
+            <div class="product-name">Tout Temps – Cereza 30ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – sandía – 30ml">
+          <img class="product-img" src="images/image372.jpg" alt="Tout Temps – Sandía – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-004</div>
+            <div class="product-name">Tout Temps – Sandía – 30ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – piña coco – 30ml">
+          <img class="product-img" src="images/image77.jpg" alt="Tout Temps – Piña Coco – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-006</div>
+            <div class="product-name">Tout Temps – Piña Coco – 30ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – chicle – 30 ml">
+          <img class="product-img" src="images/image94.jpg" alt="Tout Temps – Chicle – 30 ML">
+          <div class="product-info">
+            <div class="sku">LST-011</div>
+            <div class="product-name">Tout Temps – Chicle – 30 ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – fresa – 30ml">
+          <img class="product-img" src="images/image162.jpg" alt="Tout Temps – Fresa – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-012</div>
+            <div class="product-name">Tout Temps – Fresa – 30ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – choco fresa - 30ml">
+          <img class="product-img" src="images/image330.jpg" alt="Tout Temps – Choco Fresa - 30ML">
+          <div class="product-info">
+            <div class="sku">LST-013</div>
+            <div class="product-name">Tout Temps – Choco Fresa - 30ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – chocomenta – 30ml">
+          <img class="product-img" src="images/image37.jpg" alt="Tout Temps – Chocomenta – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-014</div>
+            <div class="product-name">Tout Temps – Chocomenta – 30ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – fresa kiwi – 30 ml">
+          <img class="product-img" src="images/image396.jpg" alt="Tout Temps – Fresa Kiwi – 30 ML">
+          <div class="product-info">
+            <div class="sku">LST-015</div>
+            <div class="product-name">Tout Temps – Fresa Kiwi – 30 ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – lub thermique – 30ml">
+          <img class="product-img" src="images/image385.jpg" alt="Tout Temps – Lub Thermique – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-016</div>
+            <div class="product-name">Tout Temps – Lub Thermique – 30ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – plutón en éxtasis – lubricante en frío – 30 ml">
+          <img class="product-img" src="images/image4.jpg" alt="Tout Temps – Plutón en Éxtasis – Lubricante en Frío – 30 ML">
+          <div class="product-info">
+            <div class="sku">LST-042</div>
+            <div class="product-name">Tout Temps – Plutón en Éxtasis – Lubricante en Frío – 30 ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – uva 30ml">
+          <img class="product-img" src="images/image79.jpg" alt="Tout Temps – Uva 30ML">
+          <div class="product-info">
+            <div class="sku">LST-083</div>
+            <div class="product-name">Tout Temps – Uva 30ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps – beso de miel 30ml">
+          <img class="product-img" src="images/image251.jpg" alt="Tout Temps – Beso de Miel 30ML">
+          <div class="product-info">
+            <div class="sku">LST-041</div>
+            <div class="product-name">Tout Temps – Beso de Miel 30ML</div>
+            <div class="product-price">$111.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps lgbt amor libre 30ml">
+          <img class="product-img" src="images/image416.jpg" alt="Tout Temps LGBT Amor Libre 30ML">
+          <div class="product-info">
+            <div class="sku">LST-086</div>
+            <div class="product-name">Tout Temps LGBT Amor Libre 30ML</div>
+            <div class="product-price">$111.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps retardante stud plus 30ml">
+          <img class="product-img" src="images/image33.png" alt="Tout Temps Retardante Stud Plus 30ML">
+          <div class="product-info">
+            <div class="sku">LST-081</div>
+            <div class="product-name">Tout Temps Retardante Stud Plus 30ML</div>
+            <div class="product-price">$111.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps hemp – 30ml">
+          <img class="product-img" src="images/image290.jpg" alt="Tout Temps Hemp – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-069</div>
+            <div class="product-name">Tout Temps Hemp – 30ML</div>
+            <div class="product-price">$122.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps híbrido 30ml">
+          <img class="product-img" src="images/image74.jpg" alt="Tout Temps Híbrido 30ML">
+          <div class="product-info">
+            <div class="sku">LST-079</div>
+            <div class="product-name">Tout Temps Híbrido 30ML</div>
+            <div class="product-price">$143.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps anal silicon 30ml">
+          <img class="product-img" src="images/image153.jpg" alt="Tout Temps Anal Silicon 30ML">
+          <div class="product-info">
+            <div class="sku">LST-078</div>
+            <div class="product-name">Tout Temps Anal Silicon 30ML</div>
+            <div class="product-price">$147.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="intimate aqua water 130 ml">
+          <img class="product-img" src="images/image145.png" alt="Intimate Aqua Water 130 ML">
+          <div class="product-info">
+            <div class="sku">INT-007</div>
+            <div class="product-name">Intimate Aqua Water 130 ML</div>
+            <div class="product-price">$225.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="lubricantes glide 1oz">
+          <img class="product-img" src="images/image403.jpg" alt="Lubricantes Glide 1OZ">
+          <div class="product-info">
+            <div class="sku">IDDGLD01</div>
+            <div class="product-name">Lubricantes Glide 1OZ</div>
+            <div class="product-price">$242.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="lubricantes pleasure 1oz bottle">
+          <img class="product-img" src="images/image44.jpg" alt="Lubricantes Pleasure 1OZ Bottle">
+          <div class="product-info">
+            <div class="sku">IDDPLS01</div>
+            <div class="product-name">Lubricantes Pleasure 1OZ Bottle</div>
+            <div class="product-price">$242.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="lubricantes sensation 1 oz">
+          <img class="product-img" src="images/image41.jpg" alt="Lubricantes Sensation 1 OZ">
+          <div class="product-info">
+            <div class="sku">IDDSNS01</div>
+            <div class="product-name">Lubricantes Sensation 1 OZ</div>
+            <div class="product-price">$242.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps aceite esencial para aromaterapia - naranja">
+          <img class="product-img" src="images/image325.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia - Naranja">
+          <div class="product-info">
+            <div class="sku">LST-070</div>
+            <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia - Naranja</div>
+            <div class="product-price">$140.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps aceite esencial para aromaterapia - toronja">
+          <img class="product-img" src="images/image100.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia - Toronja">
+          <div class="product-info">
+            <div class="sku">LST-071</div>
+            <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia - Toronja</div>
+            <div class="product-price">$140.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps aceite esencial para aromaterapia – menta limon">
+          <img class="product-img" src="images/image421.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia – Menta Limon">
+          <div class="product-info">
+            <div class="sku">LST-072</div>
+            <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia – Menta Limon</div>
+            <div class="product-price">$140.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps aceite esencial para aromaterapia – anis hierbabuena">
+          <img class="product-img" src="images/image415.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia – Anis Hierbabuena">
+          <div class="product-info">
+            <div class="sku">LST-073</div>
+            <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia – Anis Hierbabuena</div>
+            <div class="product-price">$140.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps aceite esencial para aromaterapia – lavanda eucalipto">
+          <img class="product-img" src="images/image50.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia – Lavanda Eucalipto">
+          <div class="product-info">
+            <div class="sku">LST-074</div>
+            <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia – Lavanda Eucalipto</div>
+            <div class="product-price">$140.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="tout temps aceite esencial para aromaterapia – romero">
+          <img class="product-img" src="images/image398.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia – Romero">
+          <div class="product-info">
+            <div class="sku">LST-075</div>
+            <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia – Romero</div>
+            <div class="product-price">$140.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="retardante c desensibilizador tout temps anal engourdi – 30 ml">
+          <img class="product-img" src="images/image124.jpg" alt="Retardante C Desensibilizador Tout Temps Anal Engourdi – 30 ML">
+          <div class="product-info">
+            <div class="sku">LST-027</div>
+            <div class="product-name">Retardante C Desensibilizador Tout Temps Anal Engourdi – 30 ML</div>
+            <div class="product-price">$99.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="gel c crema tout temps – multi orgasme – 30ml bottle lubricant">
+          <img class="product-img" src="images/image212.jpg" alt="Gel C Crema Tout Temps – Multi Orgasme – 30ML Bottle Lubricant">
+          <div class="product-info">
+            <div class="sku">LST-010</div>
+            <div class="product-name">Gel C Crema Tout Temps – Multi Orgasme – 30ML Bottle Lubricant</div>
+            <div class="product-price">$90.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="gel lubricante tout temps - con ácido hialurónico y vitamina e – 30 ml">
+          <img class="product-img" src="images/image233.jpg" alt="Gel Lubricante Tout Temps - Con ácido hialurónico y Vitamina E – 30 ML">
+          <div class="product-info">
+            <div class="sku">LST-068</div>
+            <div class="product-name">Gel Lubricante Tout Temps - Con ácido hialurónico y Vitamina E – 30 ML</div>
+            <div class="product-price">$110.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="gel lubricante tout temps – cool gel extra frío 30ml">
+          <img class="product-img" src="images/image380.jpg" alt="Gel Lubricante Tout Temps – Cool Gel Extra Frío 30ML">
+          <div class="product-info">
+            <div class="sku">LST-080</div>
+            <div class="product-name">Gel Lubricante Tout Temps – Cool Gel Extra Frío 30ML</div>
+            <div class="product-price">$111.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="retardante c desensibilizador tout temps – érection retardé – 30ml">
+          <img class="product-img" src="images/image119.jpg" alt="Retardante C Desensibilizador Tout Temps – Érection Retardé – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-017</div>
+            <div class="product-name">Retardante C Desensibilizador Tout Temps – Érection Retardé – 30ML</div>
+            <div class="product-price">$111.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="gel y crema estimulante tout temps – fermer la vagine – 30ml">
+          <img class="product-img" src="images/image23.jpg" alt="Gel y Crema Estimulante Tout Temps – Fermer La Vagine – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-018</div>
+            <div class="product-name">Gel y Crema Estimulante Tout Temps – Fermer La Vagine – 30ML</div>
+            <div class="product-price">$111.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="gel lubricante tout temps – orgasme gel – 30ml">
+          <img class="product-img" src="images/image428.jpg" alt="Gel Lubricante Tout Temps – Orgasme Gel – 30ML">
+          <div class="product-info">
+            <div class="sku">LST-007</div>
+            <div class="product-name">Gel Lubricante Tout Temps – Orgasme Gel – 30ML</div>
+            <div class="product-price">$111.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="gel lubricante tout temps – lub silicone premium 30ml">
+          <img class="product-img" src="images/image149.jpg" alt="Gel Lubricante Tout Temps – Lub Silicone Premium 30ML">
+          <div class="product-info">
+            <div class="sku">LST-019</div>
+            <div class="product-name">Gel Lubricante Tout Temps – Lub Silicone Premium 30ML</div>
+            <div class="product-price">$197.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="gel lubricante for men titan gold">
+          <img class="product-img" src="images/image38.png" alt="Gel Lubricante for Men Titan Gold">
+          <div class="product-info">
+            <div class="sku">933</div>
+            <div class="product-name">Gel Lubricante for Men Titan Gold</div>
+            <div class="product-price">$247.50</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="masturbadores">
+      <h2 class="cat-title">Masturbadores</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="masturbador pump and dump">
+          <img class="product-img" src="images/image19.png" alt="Masturbador Pump and Dump">
+          <div class="product-info">
+            <div class="sku">PD3791-20</div>
+            <div class="product-name">Masturbador Pump and Dump</div>
+            <div class="product-price">$390.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador boundless anus- frost">
+          <img class="product-img" src="images/image76.jpg" alt="Masturbador Boundless Anus- Frost">
+          <div class="product-info">
+            <div class="sku">SE-2699-15-3</div>
+            <div class="product-name">Masturbador Boundless Anus- Frost</div>
+            <div class="product-price">$519.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador sexy snatch natural">
+          <img class="product-img" src="images/image333.jpg" alt="Masturbador Sexy Snatch Natural">
+          <div class="product-info">
+            <div class="sku">BL-06423</div>
+            <div class="product-name">Masturbador Sexy Snatch Natural</div>
+            <div class="product-price">$565.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador doble vagina &amp; boca">
+          <img class="product-img" src="images/image35.jpg" alt="Masturbador Doble Vagina &amp;amp; Boca">
+          <div class="product-info">
+            <div class="sku">CP008</div>
+            <div class="product-name">Masturbador Doble Vagina &amp;amp; Boca</div>
+            <div class="product-price">$640.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador m for men isabella mocha">
+          <img class="product-img" src="images/image394.jpg" alt="Masturbador M for Men Isabella Mocha">
+          <div class="product-info">
+            <div class="sku">BL-73537</div>
+            <div class="product-name">Masturbador M for Men Isabella Mocha</div>
+            <div class="product-price">$597.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador m for men angie - vanilla">
+          <img class="product-img" src="images/image36.jpg" alt="Masturbador M for Men Angie - Vanilla">
+          <div class="product-info">
+            <div class="sku">BL-73533</div>
+            <div class="product-name">Masturbador M for Men Angie - Vanilla</div>
+            <div class="product-price">$647.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador m for men rain - vanilla">
+          <img class="product-img" src="images/image193.jpg" alt="Masturbador M for Men Rain - Vanilla">
+          <div class="product-info">
+            <div class="sku">BL-73513</div>
+            <div class="product-name">Masturbador M for Men Rain - Vanilla</div>
+            <div class="product-price">$650.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador m for men sofia - mocha">
+          <img class="product-img" src="images/image85.jpg" alt="Masturbador M for Men Sofia - Mocha">
+          <div class="product-info">
+            <div class="sku">BL-73507</div>
+            <div class="product-name">Masturbador M for Men Sofia - Mocha</div>
+            <div class="product-price">$650.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador m for men ashley">
+          <img class="product-img" src="images/image397.jpg" alt="Masturbador M for Men Ashley">
+          <div class="product-info">
+            <div class="sku">BL-73503</div>
+            <div class="product-name">Masturbador M for Men Ashley</div>
+            <div class="product-price">$650.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador dual vibrating head teaser smoke">
+          <img class="product-img" src="images/image227.jpg" alt="Masturbador Dual Vibrating Head Teaser Smoke">
+          <div class="product-info">
+            <div class="sku">PD1996-24</div>
+            <div class="product-name">Masturbador Dual Vibrating Head Teaser Smoke</div>
+            <div class="product-price">$943.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador dual vibrating ball teaser">
+          <img class="product-img" src="images/image379.png" alt="Masturbador Dual Vibrating Ball Teaser">
+          <div class="product-info">
+            <div class="sku">PD1997-14</div>
+            <div class="product-name">Masturbador Dual Vibrating Ball Teaser</div>
+            <div class="product-price">$1,028.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador electric cola cup x one">
+          <img class="product-img" src="images/image52.jpg" alt="Masturbador Electric Cola Cup X One">
+          <div class="product-info">
+            <div class="sku">CP006</div>
+            <div class="product-name">Masturbador Electric Cola Cup X One</div>
+            <div class="product-price">$440.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador footballe cup trophy">
+          <img class="product-img" src="images/image168.jpg" alt="Masturbador Footballe Cup Trophy">
+          <div class="product-info">
+            <div class="sku">CP014</div>
+            <div class="product-name">Masturbador Footballe Cup Trophy</div>
+            <div class="product-price">$640.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador hand pussy light brown">
+          <img class="product-img" src="images/image287.jpg" alt="Masturbador Hand Pussy Light Brown">
+          <div class="product-info">
+            <div class="sku">3082-1</div>
+            <div class="product-name">Masturbador Hand Pussy Light Brown</div>
+            <div class="product-price">$1,190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador hand pussy white">
+          <img class="product-img" src="images/image319.jpg" alt="Masturbador Hand Pussy White">
+          <div class="product-info">
+            <div class="sku">2927</div>
+            <div class="product-name">Masturbador Hand Pussy White</div>
+            <div class="product-price">$1,198.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador soft and wet annabella">
+          <img class="product-img" src="images/image105.jpg" alt="Masturbador Soft And Wet Annabella">
+          <div class="product-info">
+            <div class="sku">BL-72613</div>
+            <div class="product-name">Masturbador Soft And Wet Annabella</div>
+            <div class="product-price">$918.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador dream stroker">
+          <img class="product-img" src="images/image111.jpg" alt="Masturbador Dream Stroker">
+          <div class="product-info">
+            <div class="sku">RD604-21</div>
+            <div class="product-name">Masturbador Dream Stroker</div>
+            <div class="product-price">$735.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador heaven stroker">
+          <img class="product-img" src="images/image404.png" alt="Masturbador Heaven Stroker">
+          <div class="product-info">
+            <div class="sku">RD603-21</div>
+            <div class="product-name">Masturbador Heaven Stroker</div>
+            <div class="product-price">$735.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="m for men amber beige">
+          <img class="product-img" src="images/image6.png" alt="M for Men Amber Beige">
+          <div class="product-info">
+            <div class="sku">BL-72703</div>
+            <div class="product-name">M for Men Amber Beige</div>
+            <div class="product-price">$1,240.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="masturbador x5 honey pot">
+          <img class="product-img" src="images/image195.png" alt="Masturbador X5 Honey Pot">
+          <div class="product-info">
+            <div class="sku">BL-90873</div>
+            <div class="product-name">Masturbador X5 Honey Pot</div>
+            <div class="product-price">$875.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="estimulador manual egg tenga - wavy">
+          <img class="product-img" src="images/image143.jpg" alt="Estimulador Manual Egg Tenga - Wavy">
+          <div class="product-info">
+            <div class="sku">0502</div>
+            <div class="product-name">Estimulador Manual Egg Tenga - Wavy</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="estimulador manual egg tenga - clicker">
+          <img class="product-img" src="images/image57.jpg" alt="Estimulador Manual Egg Tenga - Clicker">
+          <div class="product-info">
+            <div class="sku">0519</div>
+            <div class="product-name">Estimulador Manual Egg Tenga - Clicker</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="estimulador manual egg tenga - spider">
+          <img class="product-img" src="images/image184.jpg" alt="Estimulador Manual Egg Tenga - Spider">
+          <div class="product-info">
+            <div class="sku">0526</div>
+            <div class="product-name">Estimulador Manual Egg Tenga - Spider</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="estimulador manual egg tenga - twister">
+          <img class="product-img" src="images/image232.jpg" alt="Estimulador Manual Egg Tenga - Twister">
+          <div class="product-info">
+            <div class="sku">0649</div>
+            <div class="product-name">Estimulador Manual Egg Tenga - Twister</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="estimulador manual egg tenga - silky">
+          <img class="product-img" src="images/image126.jpg" alt="Estimulador Manual Egg Tenga - Silky">
+          <div class="product-info">
+            <div class="sku">0663</div>
+            <div class="product-name">Estimulador Manual Egg Tenga - Silky</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="estimulador manual egg tenga - stepper">
+          <img class="product-img" src="images/image115.jpg" alt="Estimulador Manual Egg Tenga - Stepper">
+          <div class="product-info">
+            <div class="sku">0656</div>
+            <div class="product-name">Estimulador Manual Egg Tenga - Stepper</div>
+            <div class="product-price">$190.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="preservativos">
+      <h2 class="cat-title">Preservativos</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="condon one classic select universal">
+          <img class="product-img" src="images/image75.jpg" alt="Condon One Classic Select Universal">
+          <div class="product-info">
+            <div class="sku">11100CZ</div>
+            <div class="product-name">Condon One Classic Select Universal</div>
+            <div class="product-price">$42.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="condon one flavorwaves">
+          <img class="product-img" src="images/image393.jpg" alt="Condon One Flavorwaves">
+          <div class="product-info">
+            <div class="sku">COS-001</div>
+            <div class="product-name">Condon One Flavorwaves</div>
+            <div class="product-price">$35.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="condon trustex sabores vainilla, platano, uva, chocolate, cola">
+          <img class="product-img" src="images/image34.jpg" alt="Condon Trustex Sabores Vainilla, Platano, Uva, Chocolate, Cola">
+          <div class="product-info">
+            <div class="sku"></div>
+            <div class="product-name">Condon Trustex Sabores Vainilla, Platano, Uva, Chocolate, Cola</div>
+            <div class="product-price">$30.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="vibradoresbala">
+      <h2 class="cat-title">Vibradores Bala</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="bala fushia insertable con cordón">
+          <img class="product-img" src="images/image73.jpg" alt="Bala Fushia Insertable con Cordón">
+          <div class="product-info">
+            <div class="sku">BL-14333</div>
+            <div class="product-name">Bala Fushia Insertable con Cordón</div>
+            <div class="product-price">$105.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora glitzo geo lipstick">
+          <img class="product-img" src="images/image279.jpg" alt="Bala Vibradora Glitzo Geo Lipstick">
+          <div class="product-info">
+            <div class="sku">798</div>
+            <div class="product-name">Bala Vibradora Glitzo Geo Lipstick</div>
+            <div class="product-price">$673.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora con control alambrico">
+          <img class="product-img" src="images/image103.png" alt="Bala Vibradora Con control Alambrico">
+          <div class="product-info">
+            <div class="sku">SG1342</div>
+            <div class="product-name">Bala Vibradora Con control Alambrico</div>
+            <div class="product-price">$150.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora charming vibe">
+          <img class="product-img" src="images/image313.png" alt="Bala Vibradora Charming Vibe">
+          <div class="product-info">
+            <div class="sku">ST-050</div>
+            <div class="product-name">Bala Vibradora Charming Vibe</div>
+            <div class="product-price">$175.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora silver bullet classic">
+          <img class="product-img" src="images/image367.png" alt="Bala Vibradora Silver Bullet Classic">
+          <div class="product-info">
+            <div class="sku">SE-1109-05-3</div>
+            <div class="product-name">Bala Vibradora Silver Bullet Classic</div>
+            <div class="product-price">$320.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora yours power bullet">
+          <img class="product-img" src="images/image386.jpg" alt="Bala Vibradora Yours Power Bullet">
+          <div class="product-info">
+            <div class="sku">BL-05501</div>
+            <div class="product-name">Bala Vibradora Yours Power Bullet</div>
+            <div class="product-price">$367.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora glitter power bullet">
+          <img class="product-img" src="images/image118.jpg" alt="Bala Vibradora Glitter Power Bullet">
+          <div class="product-info">
+            <div class="sku">BL-05532</div>
+            <div class="product-name">Bala Vibradora Glitter Power Bullet</div>
+            <div class="product-price">$415.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora tickler bullet">
+          <img class="product-img" src="images/image336.jpg" alt="Bala Vibradora Tickler Bullet">
+          <div class="product-info">
+            <div class="sku">BL-05321</div>
+            <div class="product-name">Bala Vibradora Tickler Bullet</div>
+            <div class="product-price">$472.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora pocket gold bullets">
+          <img class="product-img" src="images/image257.jpg" alt="Bala Vibradora Pocket Gold Bullets">
+          <div class="product-info">
+            <div class="sku">SE-1104-07-2</div>
+            <div class="product-name">Bala Vibradora Pocket Gold Bullets</div>
+            <div class="product-price">$469.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora bullets g spot pink">
+          <img class="product-img" src="images/image410.jpg" alt="Bala Vibradora Bullets G Spot Pink">
+          <div class="product-info">
+            <div class="sku">XHT-05b</div>
+            <div class="product-name">Bala Vibradora Bullets G Spot Pink</div>
+            <div class="product-price">$445.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador controlado por app huevito inteligente multi función">
+          <img class="product-img" src="images/image90.jpg" alt="Vibrador Controlado por App Huevito Inteligente Multi Función">
+          <div class="product-info">
+            <div class="sku">B71</div>
+            <div class="product-name">Vibrador Controlado por App Huevito Inteligente Multi Función</div>
+            <div class="product-price">$613.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora 10x bullet pink">
+          <img class="product-img" src="images/image134.png" alt="Bala Vibradora 10X Bullet PINK">
+          <div class="product-info">
+            <div class="sku">PINK</div>
+            <div class="product-name">Bala Vibradora 10X Bullet PINK</div>
+            <div class="product-price">$925.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora bullet bright rosa">
+          <img class="product-img" src="images/image71.jpg" alt="Bala Vibradora Bullet Bright Rosa">
+          <div class="product-info">
+            <div class="sku">XL-A007A</div>
+            <div class="product-name">Bala Vibradora Bullet Bright Rosa</div>
+            <div class="product-price">$325.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora bullet bright negro">
+          <img class="product-img" src="images/image30.jpg" alt="Bala Vibradora Bullet Bright Negro">
+          <div class="product-info">
+            <div class="sku">XL-A007C</div>
+            <div class="product-name">Bala Vibradora Bullet Bright Negro</div>
+            <div class="product-price">$325.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora bullet bright circle negro">
+          <img class="product-img" src="images/image183.jpg" alt="Bala Vibradora Bullet Bright Circle Negro">
+          <div class="product-info">
+            <div class="sku">XL-B002N</div>
+            <div class="product-name">Bala Vibradora Bullet Bright Circle Negro</div>
+            <div class="product-price">$430.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora bullet bright circle rosa">
+          <img class="product-img" src="images/image192.jpg" alt="Bala Vibradora Bullet Bright Circle Rosa">
+          <div class="product-info">
+            <div class="sku">XL-B002R</div>
+            <div class="product-name">Bala Vibradora Bullet Bright Circle Rosa</div>
+            <div class="product-price">$430.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="stimulador insertable de punto g pink">
+          <img class="product-img" src="images/image55.jpg" alt="Stimulador Insertable de Punto G Pink">
+          <div class="product-info">
+            <div class="sku">SG1045</div>
+            <div class="product-name">Stimulador Insertable de Punto G Pink</div>
+            <div class="product-price">$450.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador punto g sg9744">
+          <img class="product-img" src="images/image409.jpg" alt="Vibrador Punto G SG9744">
+          <div class="product-info">
+            <div class="sku">SG9744</div>
+            <div class="product-name">Vibrador Punto G SG9744</div>
+            <div class="product-price">$597.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador con control remoto estimulador rosa insertable con argolla">
+          <img class="product-img" src="images/image399.jpg" alt="Vibrador con Control Remoto Estimulador Rosa Insertable con Argolla">
+          <div class="product-info">
+            <div class="sku">SG1793</div>
+            <div class="product-name">Vibrador con Control Remoto Estimulador Rosa Insertable con Argolla</div>
+            <div class="product-price">$748.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador con control remoto estimulador rojo insertable con cordón">
+          <img class="product-img" src="images/image49.jpg" alt="Vibrador con Control Remoto Estimulador Rojo Insertable con Cordón">
+          <div class="product-info">
+            <div class="sku">SG0390</div>
+            <div class="product-name">Vibrador con Control Remoto Estimulador Rojo Insertable con Cordón</div>
+            <div class="product-price">$673.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora 10x bullet ag656-pink">
+          <img class="product-img" src="images/image377.png" alt="Bala Vibradora 10X Bullet AG656-PINK">
+          <div class="product-info">
+            <div class="sku">AG656-PINK</div>
+            <div class="product-name">Bala Vibradora 10X Bullet AG656-PINK</div>
+            <div class="product-price">$625.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora 10x bullet ag656-purple">
+          <img class="product-img" src="images/image98.jpg" alt="Bala Vibradora 10X Bullet AG656-PURPLE">
+          <div class="product-info">
+            <div class="sku">AG656-PURPLE</div>
+            <div class="product-name">Bala Vibradora 10X Bullet AG656-PURPLE</div>
+            <div class="product-price">$625.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora con control remoto ag366-purple">
+          <img class="product-img" src="images/image349.jpg" alt="Bala Vibradora con Control Remoto AG366-PURPLE">
+          <div class="product-info">
+            <div class="sku">AG366-PURPLE</div>
+            <div class="product-name">Bala Vibradora con Control Remoto AG366-PURPLE</div>
+            <div class="product-price">$895.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala vibradora con control remoto ag366-pink">
+          <img class="product-img" src="images/image95.jpg" alt="Bala Vibradora con control remoto AG366-PINK">
+          <div class="product-info">
+            <div class="sku">AG366-PINK</div>
+            <div class="product-name">Bala Vibradora con control remoto AG366-PINK</div>
+            <div class="product-price">$895.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala ribbed silicone egg recargable purple">
+          <img class="product-img" src="images/image225.jpg" alt="Bala Ribbed Silicone Egg Recargable Purple">
+          <div class="product-info">
+            <div class="sku">AG521-Pink</div>
+            <div class="product-name">Bala Ribbed Silicone Egg Recargable Purple</div>
+            <div class="product-price">$1,495.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="silicone egg purple ag951">
+          <img class="product-img" src="images/image78.jpg" alt="Silicone Egg Purple AG951">
+          <div class="product-info">
+            <div class="sku">AG951</div>
+            <div class="product-name">Silicone Egg Purple AG951</div>
+            <div class="product-price">$1,225.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="egg vibrator odette peach">
+          <img class="product-img" src="images/image201.png" alt="Egg Vibrator Odette Peach">
+          <div class="product-info">
+            <div class="sku">A</div>
+            <div class="product-name">Egg Vibrator Odette Peach</div>
+            <div class="product-price">$1,370.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="kit bala ultra powerful kit – con 4 accesorios">
+          <img class="product-img" src="images/image120.jpg" alt="Kit Bala Ultra Powerful Kit – con 4 accesorios">
+          <div class="product-info">
+            <div class="sku">AG992</div>
+            <div class="product-name">Kit Bala Ultra Powerful Kit – con 4 accesorios</div>
+            <div class="product-price">$1,043.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="kit bala para parejas kit – finger vibe">
+          <img class="product-img" src="images/image132.jpg" alt="Kit Bala para Parejas Kit – Finger Vibe">
+          <div class="product-info">
+            <div class="sku">AG580</div>
+            <div class="product-name">Kit Bala para Parejas Kit – Finger Vibe</div>
+            <div class="product-price">$1,265.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="sultry sensation kit recargable">
+          <img class="product-img" src="images/image173.jpg" alt="Sultry Sensation Kit Recargable">
+          <div class="product-info">
+            <div class="sku">SE-2058-00-3</div>
+            <div class="product-name">Sultry Sensation Kit Recargable</div>
+            <div class="product-price">$940.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="ovo s4 recharge lay on light blue">
+          <img class="product-img" src="images/image128.jpg" alt="Ovo S4 Recharge Lay On Light Blue">
+          <div class="product-info">
+            <div class="sku">N</div>
+            <div class="product-name">Ovo S4 Recharge Lay On Light Blue</div>
+            <div class="product-price">$1,485.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="bala punto g vibradora con control remoto">
+          <img class="product-img" src="images/image155.jpg" alt="Bala Punto G Vibradora con control remoto">
+          <div class="product-info">
+            <div class="sku">AJLT-030</div>
+            <div class="product-name">Bala Punto G Vibradora con control remoto</div>
+            <div class="product-price">$1,432.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="hanky spank me remote vibrating panties">
+          <img class="product-img" src="images/image350.jpg" alt="Hanky Spank Me Remote Vibrating Panties">
+          <div class="product-info">
+            <div class="sku">PD4027-23</div>
+            <div class="product-name">Hanky Spank Me Remote Vibrating Panties</div>
+            <div class="product-price">$869.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="fantasy panty control remoto">
+          <img class="product-img" src="images/image167.jpg" alt="Fantasy Panty Control Remoto">
+          <div class="product-info">
+            <div class="sku">PD4025-23</div>
+            <div class="product-name">Fantasy Panty Control Remoto</div>
+            <div class="product-price">$2,005.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="vibradores">
+      <h2 class="cat-title">Vibradores Femeninos</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="vibrador mr. strange 8 purple">
+          <img class="product-img" src="images/image179.jpg" alt="Vibrador Mr. Strange 8 Purple">
+          <div class="product-info">
+            <div class="sku">ST-2404</div>
+            <div class="product-name">Vibrador Mr. Strange 8 Purple</div>
+            <div class="product-price">$230.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador mr. strange 8 pink">
+          <img class="product-img" src="images/image59.jpg" alt="Vibrador Mr. Strange 8 Pink">
+          <div class="product-info">
+            <div class="sku">ST-2404</div>
+            <div class="product-name">Vibrador Mr. Strange 8 Pink</div>
+            <div class="product-price">$230.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo 8 wand">
+          <img class="product-img" src="images/image56.jpg" alt="Dildo 8 Wand">
+          <div class="product-info">
+            <div class="sku">ST-2403</div>
+            <div class="product-name">Dildo 8 Wand</div>
+            <div class="product-price">$567.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 6.5" cocky - curvy">
+          <img class="product-img" src="images/image7.jpg" alt="Vibrador 6.5&quot; Cocky - Curvy">
+          <div class="product-info">
+            <div class="sku">10067P</div>
+            <div class="product-name">Vibrador 6.5&quot; Cocky - Curvy</div>
+            <div class="product-price">$322.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador ergonómico punto g">
+          <img class="product-img" src="images/image413.png" alt="VIBRADOR ERGONÓMICO PUNTO G">
+          <div class="product-info">
+            <div class="sku">SG1234</div>
+            <div class="product-name">VIBRADOR ERGONÓMICO PUNTO G</div>
+            <div class="product-price">$747.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo wet dreams">
+          <img class="product-img" src="images/image331.jpg" alt="Dildo Wet Dreams">
+          <div class="product-info">
+            <div class="sku">2925</div>
+            <div class="product-name">Dildo Wet Dreams</div>
+            <div class="product-price">$587.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 21" magic vibes 21 cm black">
+          <img class="product-img" src="images/image387.jpg" alt="Vibrador 21&quot; Magic Vibes 21 CM Black">
+          <div class="product-info">
+            <div class="sku">ST-7008</div>
+            <div class="product-name">Vibrador 21&quot; Magic Vibes 21 CM Black</div>
+            <div class="product-price">$647.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 21" magic vibes 21 cm purple">
+          <img class="product-img" src="images/image401.jpg" alt="Vibrador 21&quot; Magic Vibes 21 CM Purple">
+          <div class="product-info">
+            <div class="sku">ST-7008</div>
+            <div class="product-name">Vibrador 21&quot; Magic Vibes 21 CM Purple</div>
+            <div class="product-price">$647.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador discreto sexy things body and soul adore">
+          <img class="product-img" src="images/image109.jpg" alt="Vibrador Discreto Sexy Things Body And Soul Adore">
+          <div class="product-info">
+            <div class="sku">SE-0534-30-3</div>
+            <div class="product-name">Vibrador Discreto Sexy Things Body And Soul Adore</div>
+            <div class="product-price">$520.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="rocker bn-34180">
+          <img class="product-img" src="images/image200.jpg" alt="Rocker BN-34180">
+          <div class="product-info">
+            <div class="sku">BN-34180</div>
+            <div class="product-name">Rocker BN-34180</div>
+            <div class="product-price">$335.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 9.5" marcus">
+          <img class="product-img" src="images/image43.jpg" alt="Vibrador 9.5&quot; Marcus">
+          <div class="product-info">
+            <div class="sku">TZ-468</div>
+            <div class="product-name">Vibrador 9.5&quot; Marcus</div>
+            <div class="product-price">$330.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 9.2" maximus">
+          <img class="product-img" src="images/image113.jpg" alt="Vibrador 9.2&quot; Maximus">
+          <div class="product-info">
+            <div class="sku">TZ-470</div>
+            <div class="product-name">Vibrador 9.2&quot; Maximus</div>
+            <div class="product-price">$322.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 8.5" angelus">
+          <img class="product-img" src="images/image97.jpg" alt="Vibrador 8.5&quot; Angelus">
+          <div class="product-info">
+            <div class="sku">TZ-469</div>
+            <div class="product-name">Vibrador 8.5&quot; Angelus</div>
+            <div class="product-price">$365.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 8.4" hermes">
+          <img class="product-img" src="images/image391.jpg" alt="Vibrador 8.4&quot; Hermes">
+          <div class="product-info">
+            <div class="sku">TZ-471</div>
+            <div class="product-name">Vibrador 8.4&quot; Hermes</div>
+            <div class="product-price">$365.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 8" cocky - longer">
+          <img class="product-img" src="images/image70.jpg" alt="Vibrador 8&quot; Cocky - Longer">
+          <div class="product-info">
+            <div class="sku">10069P</div>
+            <div class="product-name">Vibrador 8&quot; Cocky - Longer</div>
+            <div class="product-price">$352.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 8" fernando">
+          <img class="product-img" src="images/image382.jpg" alt="Vibrador 8&quot; Fernando">
+          <div class="product-info">
+            <div class="sku">LY-018</div>
+            <div class="product-name">Vibrador 8&quot; Fernando</div>
+            <div class="product-price">$405.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo vibrador 20cm tomeery flesh">
+          <img class="product-img" src="images/image82.png" alt="Dildo Vibrador 20CM Tomeery Flesh">
+          <div class="product-info">
+            <div class="sku">ST-083</div>
+            <div class="product-name">Dildo Vibrador 20CM Tomeery Flesh</div>
+            <div class="product-price">$407.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo vibrador recargable 20 cm plasure tarsy flesh">
+          <img class="product-img" src="images/image374.png" alt="Dildo Vibrador Recargable 20 CM Plasure Tarsy Flesh">
+          <div class="product-info">
+            <div class="sku">ST-079</div>
+            <div class="product-name">Dildo Vibrador Recargable 20 CM Plasure Tarsy Flesh</div>
+            <div class="product-price">$490.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo vibrador 21cm doulcy flesh">
+          <img class="product-img" src="images/image129.png" alt="Dildo Vibrador 21CM Doulcy Flesh">
+          <div class="product-info">
+            <div class="sku">ST-080</div>
+            <div class="product-name">Dildo Vibrador 21CM Doulcy Flesh</div>
+            <div class="product-price">$407.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo vibrador recargable 18 cm playsure nusy flesh">
+          <img class="product-img" src="images/image21.jpg" alt="Dildo Vibrador Recargable 18 CM Playsure Nusy Flesh">
+          <div class="product-info">
+            <div class="sku">ST-081</div>
+            <div class="product-name">Dildo Vibrador Recargable 18 CM Playsure Nusy Flesh</div>
+            <div class="product-price">$490.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo vibrador 22cm nastury flesh">
+          <img class="product-img" src="images/image405.jpg" alt="Dildo Vibrador 22CM Nastury Flesh">
+          <div class="product-info">
+            <div class="sku">ST-082</div>
+            <div class="product-name">Dildo Vibrador 22CM Nastury Flesh</div>
+            <div class="product-price">$410.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibratory naturally yours mr. right now - pink">
+          <img class="product-img" src="images/image64.jpg" alt="Vibratory Naturally Yours Mr. Right Now - Pink">
+          <div class="product-info">
+            <div class="sku">BL-52800</div>
+            <div class="product-name">Vibratory Naturally Yours Mr. Right Now - Pink</div>
+            <div class="product-price">$605.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibratory naturally yours rumba - purple">
+          <img class="product-img" src="images/image11.jpg" alt="Vibratory Naturally Yours Rumba - Purple">
+          <div class="product-info">
+            <div class="sku">BL-84592</div>
+            <div class="product-name">Vibratory Naturally Yours Rumba - Purple</div>
+            <div class="product-price">$670.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibratory naturally yours mambo vibe - pink">
+          <img class="product-img" src="images/image378.png" alt="Vibratory Naturally Yours Mambo Vibe - Pink">
+          <div class="product-info">
+            <div class="sku">BL-12010</div>
+            <div class="product-name">Vibratory Naturally Yours Mambo Vibe - Pink</div>
+            <div class="product-price">$920.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo vibrador realista 8.7" 10 velocidades">
+          <img class="product-img" src="images/image81.jpg" alt="Dildo Vibrador Realista 8.7&quot; 10 Velocidades">
+          <div class="product-info">
+            <div class="sku">RBA-018</div>
+            <div class="product-name">Dildo Vibrador Realista 8.7&quot; 10 Velocidades</div>
+            <div class="product-price">$560.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo vibrador realista 8.8" 10 velocidades">
+          <img class="product-img" src="images/image51.jpg" alt="Dildo Vibrador Realista 8.8&quot; 10 Velocidades">
+          <div class="product-info">
+            <div class="sku">RBA-017</div>
+            <div class="product-name">Dildo Vibrador Realista 8.8&quot; 10 Velocidades</div>
+            <div class="product-price">$560.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="dildo vibrador 9" realista 10 velocidades">
+          <img class="product-img" src="images/image392.jpg" alt="Dildo Vibrador 9&quot; Realista 10 Velocidades">
+          <div class="product-info">
+            <div class="sku">RBA-016</div>
+            <div class="product-name">Dildo Vibrador 9&quot; Realista 10 Velocidades</div>
+            <div class="product-price">$580.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 8.5" cock vibe">
+          <img class="product-img" src="images/image140.png" alt="Vibrador 8.5&quot; Cock Vibe">
+          <div class="product-info">
+            <div class="sku">BL-11313</div>
+            <div class="product-name">Vibrador 8.5&quot; Cock Vibe</div>
+            <div class="product-price">$817.50</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 8" miguel">
+          <img class="product-img" src="images/image388.jpg" alt="Vibrador 8&quot; Miguel">
+          <div class="product-info">
+            <div class="sku">BL-15017</div>
+            <div class="product-name">Vibrador 8&quot; Miguel</div>
+            <div class="product-price">$985.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 9.75" cock vibe">
+          <img class="product-img" src="images/image361.jpg" alt="Vibrador 9.75&quot; Cock Vibe">
+          <div class="product-info">
+            <div class="sku">BL-11333</div>
+            <div class="product-name">Vibrador 9.75&quot; Cock Vibe</div>
+            <div class="product-price">$985.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="blus vibrador tomas - latin">
+          <img class="product-img" src="images/image54.jpg" alt="Blus Vibrador Tomas - Latin">
+          <div class="product-info">
+            <div class="sku">BL-18017</div>
+            <div class="product-name">Blus Vibrador Tomas - Latin</div>
+            <div class="product-price">$985.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador home wrecker">
+          <img class="product-img" src="images/image375.png" alt="Vibrador Home Wrecker">
+          <div class="product-info">
+            <div class="sku">BL-52283</div>
+            <div class="product-name">Vibrador Home Wrecker</div>
+            <div class="product-price">$1,225.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 7.5" big jerry">
+          <img class="product-img" src="images/image60.jpg" alt="Vibrador 7.5&quot; Big Jerry">
+          <div class="product-info">
+            <div class="sku">ZDB-012</div>
+            <div class="product-name">Vibrador 7.5&quot; Big Jerry</div>
+            <div class="product-price">$745.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador dildo 6" babe luke">
+          <img class="product-img" src="images/image355.jpg" alt="Vibrador Dildo 6&quot; Babe Luke">
+          <div class="product-info">
+            <div class="sku">ZDB-051</div>
+            <div class="product-name">Vibrador Dildo 6&quot; Babe Luke</div>
+            <div class="product-price">$730.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador babe cole 8"">
+          <img class="product-img" src="images/image125.jpg" alt="Vibrador Babe Cole 8&quot;">
+          <div class="product-info">
+            <div class="sku">ZDB-054</div>
+            <div class="product-name">Vibrador Babe Cole 8&quot;</div>
+            <div class="product-price">$745.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador dildo 6.5" babe liam">
+          <img class="product-img" src="images/image355.jpg" alt="Vibrador Dildo 6.5&quot; Babe Liam">
+          <div class="product-info">
+            <div class="sku">ZDB-052</div>
+            <div class="product-name">Vibrador Dildo 6.5&quot; Babe Liam</div>
+            <div class="product-price">$745.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador dildo 6.5" kiuty">
+          <img class="product-img" src="images/image383.jpg" alt="Vibrador Dildo 6.5&quot; Kiuty">
+          <div class="product-info">
+            <div class="sku">ZDB-102</div>
+            <div class="product-name">Vibrador Dildo 6.5&quot; Kiuty</div>
+            <div class="product-price">$887.80</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="vibrador 8" teisty">
+          <img class="product-img" src="images/image123.jpg" alt="Vibrador 8&quot; Teisty">
+          <div class="product-info">
+            <div class="sku">ZDB-043</div>
+            <div class="product-name">Vibrador 8&quot; Teisty</div>
+            <div class="product-price">$887.50</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cat-section" id="masajeadores">
+      <h2 class="cat-title">Masajeadores Ergonomicos</h2>
+      <div class="product-grid">
+        <div class="product-card" data-name="10x mini silicone wand masajeador">
+          <img class="product-img" src="images/image13.jpg" alt="10X Mini Silicone Wand Masajeador">
+          <div class="product-info">
+            <div class="sku">PD3027-12-19</div>
+            <div class="product-name">10X Mini Silicone Wand Masajeador</div>
+            <div class="product-price">$720.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="wanachi mini massager largo 20 cm ancho 3.3 cm">
+          <img class="product-img" src="images/image16.png" alt="Wanachi Mini Massager Largo 20 Cm Ancho 3.3 Cm">
+          <div class="product-info">
+            <div class="sku">AH205</div>
+            <div class="product-name">Wanachi Mini Massager Largo 20 Cm Ancho 3.3 Cm</div>
+            <div class="product-price">$735.00</div>
+          </div>
+        </div>
+        <div class="product-card" data-name="wanachi maxi massager largo 22.5 cm ancho 4 cm">
+          <img class="product-img" src="images/image80.jpg" alt="Wanachi Maxi Massager Largo 22.5 Cm Ancho 4 Cm">
+          <div class="product-info">
+            <div class="sku">PD3029-11-23</div>
+            <div class="product-name">Wanachi Maxi Massager Largo 22.5 Cm Ancho 4 Cm</div>
+            <div class="product-price">$940.00</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+<footer id="footer">
+    <p><strong>KANDY SEX SHOP</strong> &copy; 2026. Todos los derechos reservados.</p>
+  </footer>
+
+  <div id="overlay" onclick="closeDrawer()"></div>
+  <button id="menu-btn" onclick="toggleDrawer()">
+    <svg viewBox="0 0 24 24">
+      <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+    </svg>
+  </button>
+
+  <div id="cat-drawer">
+    <div class="drawer-header">
+      <h3>📋 Categorías</h3>
+      <button onclick="closeDrawer()" style="background:none;border:none;font-size:1.5rem;color:#ccc">✕</button>
+    </div>
+    <div class="drawer-grid">
+      <a class="drawer-link" href="#vibradores" onclick="closeDrawer()"><span>💜</span> Vibradores</a>
+      <a class="drawer-link" href="#anillos" onclick="closeDrawer()"><span>💍</span> Anillos</a>
+      <a class="drawer-link" href="#dildos" onclick="closeDrawer()"><span>🔥</span> Dildos</a>
+      <a class="drawer-link" href="#lubricantes" onclick="closeDrawer()"><span>💧</span> Lubricantes</a>
+      <a class="drawer-link" href="#lenceria" onclick="closeDrawer()"><span>🖤</span> Lencería</a>
+      <a class="drawer-link" href="#masturbadores" onclick="closeDrawer()"><span>🌀</span> Masturbadores</a>
+      <a class="drawer-link" href="#pluganal" onclick="closeDrawer()"><span>🔮</span> Plug Anal</a>
+      <a class="drawer-link" href="#comestibles" onclick="closeDrawer()"><span>🍬</span> Comestibles</a>
+      <a class="drawer-link" href="#arneses" onclick="closeDrawer()"><span>🔗</span> Arneses</a>
+      <a class="drawer-link" href="#bolas" onclick="closeDrawer()"><span>⚪</span> Bolas</a>
+      <a class="drawer-link" href="#bombas" onclick="closeDrawer()"><span>💨</span> Bombas</a>
+      <a class="drawer-link" href="#bondage" onclick="closeDrawer()"><span>🔒</span> Bondage</a>
+      <a class="drawer-link" href="#despedida" onclick="closeDrawer()"><span>🎉</span> Despedida</a>
+      <a class="drawer-link" href="#disfraces" onclick="closeDrawer()"><span>💃</span> Disfraces</a>
+      <a class="drawer-link" href="#enemas" onclick="closeDrawer()"><span>🚿</span> Enemas</a>
+      <a class="drawer-link" href="#estimulantes" onclick="closeDrawer()"><span>⚡</span> Estimulantes</a>
+      <a class="drawer-link" href="#feromonas" onclick="closeDrawer()"><span>✨</span> Feromonas</a>
+      <a class="drawer-link" href="#fundas" onclick="closeDrawer()"><span>🧲</span> Fundas</a>
+      <a class="drawer-link" href="#preservativos" onclick="closeDrawer()"><span>🛡️</span> Preservativos</a>
+      <a class="drawer-link" href="#masajeadores" onclick="closeDrawer()"><span>💆</span> Masajeadores</a>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('nav-bar');
+      if (window.scrollY > window.innerHeight * 0.3) {
+        nav.style.transform = 'translateY(0)'; nav.style.opacity = '1';
+      } else {
+        nav.style.transform = 'translateY(-101%)'; nav.style.opacity = '0';
+      }
+    });
+
+    function handleSearch(term) {
+      term = term.toLowerCase().trim();
+      const productCards = document.querySelectorAll('.product-card');
+      const catSections = document.querySelectorAll('.cat-section');
+      const catIndex = document.getElementById('cat-index');
+      if (!term) {
+        productCards.forEach(c => c.style.display = 'block');
+        catSections.forEach(s => s.style.display = 'block');
+        catIndex.style.display = 'block';
+        return;
+      }
+      catIndex.style.display = 'none';
+      productCards.forEach(card => {
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        const sku = card.querySelector('.sku')?.innerText.toLowerCase() || "";
+        card.style.display = (name.includes(term) || sku.includes(term)) ? 'block' : 'none';
+      });
+      catSections.forEach(s => {
+        const visible = s.querySelectorAll('.product-card[style="display: block;"]').length;
+        s.style.display = visible > 0 ? 'block' : 'none';
+      });
+    }
+
+    function enterCatalog(event) {
+      if (event) event.preventDefault();
+      const target = document.querySelector('#cat-index');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function goHome() {
+      document.body.classList.remove('catalog-open');
+      window.scrollTo(0, 0);
+    }
+
+    function toggleDrawer() {
+      document.getElementById('cat-drawer').classList.toggle('open');
+      document.getElementById('overlay').classList.toggle('show');
+    }
+    function closeDrawer() {
+      document.getElementById('cat-drawer').classList.remove('open');
+      document.getElementById('overlay').classList.remove('show');
+    }
+  </script>
+</body>
+
+</html>
