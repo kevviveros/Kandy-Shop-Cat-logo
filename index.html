@@ -35,6 +35,8 @@
       overflow-x: hidden
     }
 
+    /* APP STATES (removed since we are using inline styles) */
+
     /* COVER */
     #cover {
       height: 100svh;
@@ -54,7 +56,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle at 50% 35%, rgba(255, 32, 191, .25) 0%, transparent 75%)
+      background: radial-gradient(circle at 50% 35%, rgba(255, 32, 191, .25) 0%, transparent 75%);
+      pointer-events: none;
     }
 
     .cover-logo {
@@ -102,6 +105,8 @@
 
     .cover-btn {
       display: inline-block;
+      position: relative;
+      z-index: 10;
       padding: 1.1rem 3rem;
       background: var(--pink);
       color: #fff;
@@ -157,6 +162,12 @@
       outline: none;
       font-family: inherit
     }
+
+    body.searching #nav-bar {
+      transform: translateY(0) !important;
+      opacity: 1 !important;
+    }
+
 
     /* INDEX */
     #cat-index {
@@ -279,8 +290,8 @@
     }
 
     .product-name {
-      font-size: .88rem;
-      font-weight: 700;
+      font-size: .95rem;
+      font-weight: 400;
       line-height: 1.4;
       margin-bottom: .4rem;
       color: #1a1a1a;
@@ -290,7 +301,7 @@
     }
 
     .product-price {
-      font-size: 1.15rem;
+      font-size: 1rem;
       font-weight: 800;
       color: var(--pink);
       margin-top: auto
@@ -425,7 +436,10 @@
     @media (min-width: 768px) {
 
       /* Wider centered container for all content */
-      main, #cat-index, .cat-section, footer {
+      main,
+      #cat-index,
+      .cat-section,
+      footer {
         max-width: 1200px;
         margin-left: auto;
         margin-right: auto;
@@ -450,11 +464,28 @@
       }
 
       /* Cover hero */
-      .cover-logo  { font-size: 9rem }
-      .cover-sub   { font-size: 2rem; letter-spacing: 18px }
-      .cover-year  { font-size: 1.5rem }
-      .cover-tagline { font-size: 1.1rem; max-width: 480px }
-      .cover-btn   { font-size: 1.3rem; padding: 1.3rem 4rem }
+      .cover-logo {
+        font-size: 9rem
+      }
+
+      .cover-sub {
+        font-size: 2rem;
+        letter-spacing: 18px
+      }
+
+      .cover-year {
+        font-size: 1.5rem
+      }
+
+      .cover-tagline {
+        font-size: 1.1rem;
+        max-width: 480px
+      }
+
+      .cover-btn {
+        font-size: 1.3rem;
+        padding: 1.3rem 4rem
+      }
 
       /* Category index grid: 5 columns on desktop */
       .index-grid {
@@ -466,8 +497,13 @@
         padding: 1.2rem .8rem 1rem;
       }
 
-      .index-emoji { font-size: 2.4rem }
-      .index-label { font-size: .75rem }
+      .index-emoji {
+        font-size: 2.4rem
+      }
+
+      .index-label {
+        font-size: .75rem
+      }
 
       #cat-index h2 {
         font-size: 2rem;
@@ -490,11 +526,11 @@
       }
 
       .product-name {
-        font-size: .9rem;
+        font-size: 1rem;
       }
 
       .product-price {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
       }
 
       .sku {
@@ -526,7 +562,6 @@
         grid-template-columns: repeat(6, 1fr);
       }
     }
-
   </style>
 </head>
 
@@ -537,57 +572,22 @@
     <div class="cover-year">Catálogo 2026</div>
     <div class="cover-divider"></div>
     <p class="cover-tagline">Placer de calidad, discreción garantizada. Descubre nuestra colección completa.</p>
-    <div style="color: #fff; font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 32, 191, 0.15); padding: 0.6rem 2rem; border-radius: 50px; border: 1px solid rgba(255, 32, 191, 0.5); margin-bottom: 2.5rem; box-shadow: 0 0 15px rgba(255, 32, 191, 0.2);">
+    <div
+      style="color: #fff; font-weight: 600; font-size: 1rem; display: flex; align-items: center; gap: 0.5rem; background: rgba(255, 32, 191, 0.15); padding: 0.6rem 2rem; border-radius: 50px; border: 1px solid rgba(255, 32, 191, 0.5); margin-bottom: 2.5rem; box-shadow: 0 0 15px rgba(255, 32, 191, 0.2);">
       <span>🚚</span> Contamos con envío a domicilio
     </div>
-    <a href="#cat-index" class="cover-btn" onclick="enterCatalog(event)">Ver Catálogo →</a>
+    <button type="button" class="cover-btn" onclick="enterCatalog()">Ver Catálogo →</button>
   </section>
-  <nav id="nav-bar">
+  <nav id="nav-bar" style="display: none; transform: translateY(-101%); opacity: 0; transition: transform 0.3s ease, opacity 0.3s ease;">
     <div class="nav-logo" onclick="goHome()">KANDY</div>
     <input class="nav-search" type="search" id="search-input" placeholder="🔍 Buscar por nombre o SKU..."
       oninput="handleSearch(this.value)">
   </nav>
-  <main id="main-content">
+  <main id="main-content" style="display: none;">
 
     <section id="cat-index" aria-label="Índice de categorías">
       <h2>🏷️ CATEGORÍAS</h2>
       <div class="index-grid">
-        <a href="#vibradores" class="index-card">
-          <div class="index-emoji">💜</div>
-          <div class="index-label">Vibradores</div>
-        </a>
-        <a href="#anillos" class="index-card">
-          <div class="index-emoji">💍</div>
-          <div class="index-label">Anillos</div>
-        </a>
-        <a href="#dildos" class="index-card">
-          <div class="index-emoji">🔥</div>
-          <div class="index-label">Dildos</div>
-        </a>
-        <a href="#lubricantes" class="index-card">
-          <div class="index-emoji">💧</div>
-          <div class="index-label">Lubricantes</div>
-        </a>
-        <a href="#lenceria" class="index-card">
-          <div class="index-emoji">🖤</div>
-          <div class="index-label">Lencería</div>
-        </a>
-        <a href="#masturbadores" class="index-card">
-          <div class="index-emoji">🌀</div>
-          <div class="index-label">Masturbadores</div>
-        </a>
-        <a href="#pluganal" class="index-card">
-          <div class="index-emoji">🔮</div>
-          <div class="index-label">Plug Anal</div>
-        </a>
-        <a href="#comestibles" class="index-card">
-          <div class="index-emoji">🍬</div>
-          <div class="index-label">Comestibles</div>
-        </a>
-        <a href="#arneses" class="index-card">
-          <div class="index-emoji">🔗</div>
-          <div class="index-label">Arneses</div>
-        </a>
         <a href="#bolas" class="index-card">
           <div class="index-emoji">⚪</div>
           <div class="index-label">Bolas Vaginales</div>
@@ -596,25 +596,41 @@
           <div class="index-emoji">💨</div>
           <div class="index-label">Bombas</div>
         </a>
+        <a href="#enemas" class="index-card">
+          <div class="index-emoji">🚿</div>
+          <div class="index-label">Enemas</div>
+        </a>
+        <a href="#anillos" class="index-card">
+          <div class="index-emoji">💍</div>
+          <div class="index-label">Anillos</div>
+        </a>
+        <a href="#arneses" class="index-card">
+          <div class="index-emoji">🔗</div>
+          <div class="index-label">Arneses</div>
+        </a>
         <a href="#bondage" class="index-card">
           <div class="index-emoji">🔒</div>
           <div class="index-label">Bondage</div>
+        </a>
+        <a href="#comestibles" class="index-card">
+          <div class="index-emoji">🍬</div>
+          <div class="index-label">Comestibles</div>
+        </a>
+        <a href="#estimulantes" class="index-card">
+          <div class="index-emoji">⚡</div>
+          <div class="index-label">Estimulantes</div>
         </a>
         <a href="#despedida" class="index-card">
           <div class="index-emoji">🎉</div>
           <div class="index-label">Despedida</div>
         </a>
+        <a href="#dildos" class="index-card">
+          <div class="index-emoji">🔥</div>
+          <div class="index-label">Dildos</div>
+        </a>
         <a href="#disfraces" class="index-card">
           <div class="index-emoji">💃</div>
           <div class="index-label">Disfraces</div>
-        </a>
-        <a href="#enemas" class="index-card">
-          <div class="index-emoji">🚿</div>
-          <div class="index-label">Enemas</div>
-        </a>
-        <a href="#estimulantes" class="index-card">
-          <div class="index-emoji">⚡</div>
-          <div class="index-label">Estimulantes</div>
         </a>
         <a href="#feromonas" class="index-card">
           <div class="index-emoji">✨</div>
@@ -624,9 +640,29 @@
           <div class="index-emoji">🧲</div>
           <div class="index-label">Fundas</div>
         </a>
+        <a href="#pluganal" class="index-card">
+          <div class="index-emoji">🔮</div>
+          <div class="index-label">Plug Anal</div>
+        </a>
+        <a href="#lenceria" class="index-card">
+          <div class="index-emoji">🖤</div>
+          <div class="index-label">Lencería</div>
+        </a>
+        <a href="#lubricantes" class="index-card">
+          <div class="index-emoji">💧</div>
+          <div class="index-label">Lubricantes</div>
+        </a>
+        <a href="#masturbadores" class="index-card">
+          <div class="index-emoji">🌀</div>
+          <div class="index-label">Masturbadores</div>
+        </a>
         <a href="#preservativos" class="index-card">
           <div class="index-emoji">🛡️</div>
           <div class="index-label">Preservativos</div>
+        </a>
+        <a href="#vibradores" class="index-card">
+          <div class="index-emoji">💜</div>
+          <div class="index-label">Vibradores</div>
         </a>
         <a href="#masajeadores" class="index-card">
           <div class="index-emoji">💆</div>
@@ -1217,7 +1253,8 @@
           </div>
         </div>
         <div class="product-card" data-name="vigorizantes c afrodisíacos yohibe cubana plus ayh-02">
-          <img class="product-img" src="images/image221.jpg" alt="Vigorizantes C Afrodisíacos Yohibe Cubana Plus AYH-02">
+          <img class="product-img" src="images/image221.jpg"
+            alt="Vigorizantes C Afrodisíacos Yohibe Cubana Plus AYH-02">
           <div class="product-info">
             <div class="sku">AYH-02</div>
             <div class="product-name">Vigorizantes C Afrodisíacos Yohibe Cubana Plus AYH-02</div>
@@ -1305,7 +1342,8 @@
           </div>
         </div>
         <div class="product-card" data-name="vigorizantes c afrodisíacospink pussycat vigorizante masculino">
-          <img class="product-img" src="images/image314.jpg" alt="Vigorizantes C AfrodisíacosPink Pussycat Vigorizante Masculino">
+          <img class="product-img" src="images/image314.jpg"
+            alt="Vigorizantes C AfrodisíacosPink Pussycat Vigorizante Masculino">
           <div class="product-info">
             <div class="sku">34122</div>
             <div class="product-name">Vigorizantes C AfrodisíacosPink Pussycat Vigorizante Masculino</div>
@@ -1385,7 +1423,8 @@
           </div>
         </div>
         <div class="product-card" data-name="crema estimulante orgasmix – orgasm enhancement gel – 1oz">
-          <img class="product-img" src="images/image283.png" alt="Crema Estimulante Orgasmix – Orgasm Enhancement Gel – 1OZ">
+          <img class="product-img" src="images/image283.png"
+            alt="Crema Estimulante Orgasmix – Orgasm Enhancement Gel – 1OZ">
           <div class="product-info">
             <div class="sku">2197</div>
             <div class="product-name">Crema Estimulante Orgasmix – Orgasm Enhancement Gel – 1OZ</div>
@@ -1401,7 +1440,8 @@
           </div>
         </div>
         <div class="product-card" data-name="gel y crema estimulante liquid vigin - hang tag box 1oz">
-          <img class="product-img" src="images/image220.jpg" alt="Gel y Crema Estimulante Liquid Vigin - Hang Tag Box 1OZ">
+          <img class="product-img" src="images/image220.jpg"
+            alt="Gel y Crema Estimulante Liquid Vigin - Hang Tag Box 1OZ">
           <div class="product-info">
             <div class="sku">2198</div>
             <div class="product-name">Gel y Crema Estimulante Liquid Vigin - Hang Tag Box 1OZ</div>
@@ -1985,7 +2025,8 @@
       <h2 class="cat-title">Feromonas</h2>
       <div class="product-grid">
         <div class="product-card" data-name="feromona concentrada con aroma unisex -10ml sexto sentido">
-          <img class="product-img" src="images/image217.png" alt="Feromona Concentrada Con Aroma Unisex -10ML Sexto Sentido">
+          <img class="product-img" src="images/image217.png"
+            alt="Feromona Concentrada Con Aroma Unisex -10ML Sexto Sentido">
           <div class="product-info">
             <div class="sku">STSS-01</div>
             <div class="product-name">Feromona Concentrada Con Aroma Unisex -10ML Sexto Sentido</div>
@@ -1993,7 +2034,8 @@
           </div>
         </div>
         <div class="product-card" data-name="feromona concentrado sin aroma – unisex 10 ml sexto sentido">
-          <img class="product-img" src="images/image213.jpg" alt="Feromona Concentrado sin aroma – Unisex 10 ML Sexto Sentido">
+          <img class="product-img" src="images/image213.jpg"
+            alt="Feromona Concentrado sin aroma – Unisex 10 ML Sexto Sentido">
           <div class="product-info">
             <div class="sku">STSS-04</div>
             <div class="product-name">Feromona Concentrado sin aroma – Unisex 10 ML Sexto Sentido</div>
@@ -2041,7 +2083,8 @@
           </div>
         </div>
         <div class="product-card" data-name="feromonas sexto sentido para hombre – eternity – 10ml">
-          <img class="product-img" src="images/image246.jpg" alt="Feromonas Sexto Sentido para Hombre – Eternity – 10ML">
+          <img class="product-img" src="images/image246.jpg"
+            alt="Feromonas Sexto Sentido para Hombre – Eternity – 10ML">
           <div class="product-info">
             <div class="sku">STSS-16</div>
             <div class="product-name">Feromonas Sexto Sentido para Hombre – Eternity – 10ML</div>
@@ -2231,7 +2274,8 @@
           </div>
         </div>
         <div class="product-card" data-name="magic juego de 4 penes magic soft &amp; stretchy tickler">
-          <img class="product-img" src="images/image151.jpg" alt="Magic Juego de 4 Penes Magic Soft &amp;amp; Stretchy Tickler">
+          <img class="product-img" src="images/image151.jpg"
+            alt="Magic Juego de 4 Penes Magic Soft &amp;amp; Stretchy Tickler">
           <div class="product-info">
             <div class="sku">3228</div>
             <div class="product-name">Magic Juego de 4 Penes Magic Soft &amp;amp; Stretchy Tickler</div>
@@ -2357,7 +2401,7 @@
           </div>
         </div>
         <div class="product-card" data-name="juguete anal temptasia – slut plug 2.5"">
-          <img class="product-img" src="images/image310.png" alt="Juguete Anal Temptasia – Slut Plug 2.5&quot;">
+          <img class=" product-img" src="images/image310.png" alt="Juguete Anal Temptasia – Slut Plug 2.5&quot;">
           <div class="product-info">
             <div class="sku">BL-81205</div>
             <div class="product-name">Juguete Anal Temptasia – Slut Plug 2.5&quot;</div>
@@ -2373,7 +2417,7 @@
           </div>
         </div>
         <div class="product-card" data-name="juguete anal temptasia fuck me plug 1.75"">
-          <img class="product-img" src="images/image66.png" alt="Juguete Anal Temptasia Fuck Me Plug 1.75&quot;">
+          <img class=" product-img" src="images/image66.png" alt="Juguete Anal Temptasia Fuck Me Plug 1.75&quot;">
           <div class="product-info">
             <div class="sku">BL-95725</div>
             <div class="product-name">Juguete Anal Temptasia Fuck Me Plug 1.75&quot;</div>
@@ -2453,7 +2497,7 @@
           </div>
         </div>
         <div class="product-card" data-name="juguete anal vibrating c-ring 1.5"">
-          <img class="product-img" src="images/image61.jpg" alt="Juguete Anal Vibrating C-Ring 1.5&quot;">
+          <img class=" product-img" src="images/image61.jpg" alt="Juguete Anal Vibrating C-Ring 1.5&quot;">
           <div class="product-info">
             <div class="sku">BL-01705</div>
             <div class="product-name">Juguete Anal Vibrating C-Ring 1.5&quot;</div>
@@ -2461,7 +2505,7 @@
           </div>
         </div>
         <div class="product-card" data-name="juguete anal jet stealth 6.5"">
-          <img class="product-img" src="images/image24.png" alt="Juguete Anal Jet Stealth 6.5&quot;">
+          <img class=" product-img" src="images/image24.png" alt="Juguete Anal Jet Stealth 6.5&quot;">
           <div class="product-info">
             <div class="sku">BL-15815</div>
             <div class="product-name">Juguete Anal Jet Stealth 6.5&quot;</div>
@@ -2485,7 +2529,8 @@
           </div>
         </div>
         <div class="product-card" data-name="panties crotchless pleasure pearls butt plug size kl-2xl">
-          <img class="product-img" src="images/image46.jpg" alt="Panties Crotchless Pleasure Pearls Butt Plug SIZE KL-2XL">
+          <img class="product-img" src="images/image46.jpg"
+            alt="Panties Crotchless Pleasure Pearls Butt Plug SIZE KL-2XL">
           <div class="product-info">
             <div class="sku">PD4828-23</div>
             <div class="product-name">Panties Crotchless Pleasure Pearls Butt Plug SIZE KL-2XL</div>
@@ -2627,7 +2672,8 @@
           </div>
         </div>
         <div class="product-card" data-name="halter sexy floral patterns hollow out netted tights bodystocking">
-          <img class="product-img" src="images/image92.jpg" alt="Halter Sexy Floral Patterns Hollow Out Netted Tights Bodystocking">
+          <img class="product-img" src="images/image92.jpg"
+            alt="Halter Sexy Floral Patterns Hollow Out Netted Tights Bodystocking">
           <div class="product-info">
             <div class="sku">H3504</div>
             <div class="product-name">Halter Sexy Floral Patterns Hollow Out Netted Tights Bodystocking</div>
@@ -2961,7 +3007,8 @@
           </div>
         </div>
         <div class="product-card" data-name="tout temps – plutón en éxtasis – lubricante en frío – 30 ml">
-          <img class="product-img" src="images/image4.jpg" alt="Tout Temps – Plutón en Éxtasis – Lubricante en Frío – 30 ML">
+          <img class="product-img" src="images/image4.jpg"
+            alt="Tout Temps – Plutón en Éxtasis – Lubricante en Frío – 30 ML">
           <div class="product-info">
             <div class="sku">LST-042</div>
             <div class="product-name">Tout Temps – Plutón en Éxtasis – Lubricante en Frío – 30 ML</div>
@@ -3057,7 +3104,8 @@
           </div>
         </div>
         <div class="product-card" data-name="tout temps aceite esencial para aromaterapia - naranja">
-          <img class="product-img" src="images/image325.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia - Naranja">
+          <img class="product-img" src="images/image325.jpg"
+            alt="Tout Temps Aceite Esencial para Aromaterapia - Naranja">
           <div class="product-info">
             <div class="sku">LST-070</div>
             <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia - Naranja</div>
@@ -3065,7 +3113,8 @@
           </div>
         </div>
         <div class="product-card" data-name="tout temps aceite esencial para aromaterapia - toronja">
-          <img class="product-img" src="images/image100.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia - Toronja">
+          <img class="product-img" src="images/image100.jpg"
+            alt="Tout Temps Aceite Esencial para Aromaterapia - Toronja">
           <div class="product-info">
             <div class="sku">LST-071</div>
             <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia - Toronja</div>
@@ -3073,7 +3122,8 @@
           </div>
         </div>
         <div class="product-card" data-name="tout temps aceite esencial para aromaterapia – menta limon">
-          <img class="product-img" src="images/image421.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia – Menta Limon">
+          <img class="product-img" src="images/image421.jpg"
+            alt="Tout Temps Aceite Esencial para Aromaterapia – Menta Limon">
           <div class="product-info">
             <div class="sku">LST-072</div>
             <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia – Menta Limon</div>
@@ -3081,7 +3131,8 @@
           </div>
         </div>
         <div class="product-card" data-name="tout temps aceite esencial para aromaterapia – anis hierbabuena">
-          <img class="product-img" src="images/image415.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia – Anis Hierbabuena">
+          <img class="product-img" src="images/image415.jpg"
+            alt="Tout Temps Aceite Esencial para Aromaterapia – Anis Hierbabuena">
           <div class="product-info">
             <div class="sku">LST-073</div>
             <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia – Anis Hierbabuena</div>
@@ -3089,7 +3140,8 @@
           </div>
         </div>
         <div class="product-card" data-name="tout temps aceite esencial para aromaterapia – lavanda eucalipto">
-          <img class="product-img" src="images/image50.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia – Lavanda Eucalipto">
+          <img class="product-img" src="images/image50.jpg"
+            alt="Tout Temps Aceite Esencial para Aromaterapia – Lavanda Eucalipto">
           <div class="product-info">
             <div class="sku">LST-074</div>
             <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia – Lavanda Eucalipto</div>
@@ -3097,7 +3149,8 @@
           </div>
         </div>
         <div class="product-card" data-name="tout temps aceite esencial para aromaterapia – romero">
-          <img class="product-img" src="images/image398.jpg" alt="Tout Temps Aceite Esencial para Aromaterapia – Romero">
+          <img class="product-img" src="images/image398.jpg"
+            alt="Tout Temps Aceite Esencial para Aromaterapia – Romero">
           <div class="product-info">
             <div class="sku">LST-075</div>
             <div class="product-name">Tout Temps Aceite Esencial para Aromaterapia – Romero</div>
@@ -3105,7 +3158,8 @@
           </div>
         </div>
         <div class="product-card" data-name="retardante c desensibilizador tout temps anal engourdi – 30 ml">
-          <img class="product-img" src="images/image124.jpg" alt="Retardante C Desensibilizador Tout Temps Anal Engourdi – 30 ML">
+          <img class="product-img" src="images/image124.jpg"
+            alt="Retardante C Desensibilizador Tout Temps Anal Engourdi – 30 ML">
           <div class="product-info">
             <div class="sku">LST-027</div>
             <div class="product-name">Retardante C Desensibilizador Tout Temps Anal Engourdi – 30 ML</div>
@@ -3113,7 +3167,8 @@
           </div>
         </div>
         <div class="product-card" data-name="gel c crema tout temps – multi orgasme – 30ml bottle lubricant">
-          <img class="product-img" src="images/image212.jpg" alt="Gel C Crema Tout Temps – Multi Orgasme – 30ML Bottle Lubricant">
+          <img class="product-img" src="images/image212.jpg"
+            alt="Gel C Crema Tout Temps – Multi Orgasme – 30ML Bottle Lubricant">
           <div class="product-info">
             <div class="sku">LST-010</div>
             <div class="product-name">Gel C Crema Tout Temps – Multi Orgasme – 30ML Bottle Lubricant</div>
@@ -3121,7 +3176,8 @@
           </div>
         </div>
         <div class="product-card" data-name="gel lubricante tout temps - con ácido hialurónico y vitamina e – 30 ml">
-          <img class="product-img" src="images/image233.jpg" alt="Gel Lubricante Tout Temps - Con ácido hialurónico y Vitamina E – 30 ML">
+          <img class="product-img" src="images/image233.jpg"
+            alt="Gel Lubricante Tout Temps - Con ácido hialurónico y Vitamina E – 30 ML">
           <div class="product-info">
             <div class="sku">LST-068</div>
             <div class="product-name">Gel Lubricante Tout Temps - Con ácido hialurónico y Vitamina E – 30 ML</div>
@@ -3137,7 +3193,8 @@
           </div>
         </div>
         <div class="product-card" data-name="retardante c desensibilizador tout temps – érection retardé – 30ml">
-          <img class="product-img" src="images/image119.jpg" alt="Retardante C Desensibilizador Tout Temps – Érection Retardé – 30ML">
+          <img class="product-img" src="images/image119.jpg"
+            alt="Retardante C Desensibilizador Tout Temps – Érection Retardé – 30ML">
           <div class="product-info">
             <div class="sku">LST-017</div>
             <div class="product-name">Retardante C Desensibilizador Tout Temps – Érection Retardé – 30ML</div>
@@ -3145,7 +3202,8 @@
           </div>
         </div>
         <div class="product-card" data-name="gel y crema estimulante tout temps – fermer la vagine – 30ml">
-          <img class="product-img" src="images/image23.jpg" alt="Gel y Crema Estimulante Tout Temps – Fermer La Vagine – 30ML">
+          <img class="product-img" src="images/image23.jpg"
+            alt="Gel y Crema Estimulante Tout Temps – Fermer La Vagine – 30ML">
           <div class="product-info">
             <div class="sku">LST-018</div>
             <div class="product-name">Gel y Crema Estimulante Tout Temps – Fermer La Vagine – 30ML</div>
@@ -3161,7 +3219,8 @@
           </div>
         </div>
         <div class="product-card" data-name="gel lubricante tout temps – lub silicone premium 30ml">
-          <img class="product-img" src="images/image149.jpg" alt="Gel Lubricante Tout Temps – Lub Silicone Premium 30ML">
+          <img class="product-img" src="images/image149.jpg"
+            alt="Gel Lubricante Tout Temps – Lub Silicone Premium 30ML">
           <div class="product-info">
             <div class="sku">LST-019</div>
             <div class="product-name">Gel Lubricante Tout Temps – Lub Silicone Premium 30ML</div>
@@ -3413,7 +3472,8 @@
           </div>
         </div>
         <div class="product-card" data-name="condon trustex sabores vainilla, platano, uva, chocolate, cola">
-          <img class="product-img" src="images/image34.jpg" alt="Condon Trustex Sabores Vainilla, Platano, Uva, Chocolate, Cola">
+          <img class="product-img" src="images/image34.jpg"
+            alt="Condon Trustex Sabores Vainilla, Platano, Uva, Chocolate, Cola">
           <div class="product-info">
             <div class="sku"></div>
             <div class="product-name">Condon Trustex Sabores Vainilla, Platano, Uva, Chocolate, Cola</div>
@@ -3507,7 +3567,8 @@
           </div>
         </div>
         <div class="product-card" data-name="vibrador controlado por app huevito inteligente multi función">
-          <img class="product-img" src="images/image90.jpg" alt="Vibrador Controlado por App Huevito Inteligente Multi Función">
+          <img class="product-img" src="images/image90.jpg"
+            alt="Vibrador Controlado por App Huevito Inteligente Multi Función">
           <div class="product-info">
             <div class="sku">B71</div>
             <div class="product-name">Vibrador Controlado por App Huevito Inteligente Multi Función</div>
@@ -3571,7 +3632,8 @@
           </div>
         </div>
         <div class="product-card" data-name="vibrador con control remoto estimulador rosa insertable con argolla">
-          <img class="product-img" src="images/image399.jpg" alt="Vibrador con Control Remoto Estimulador Rosa Insertable con Argolla">
+          <img class="product-img" src="images/image399.jpg"
+            alt="Vibrador con Control Remoto Estimulador Rosa Insertable con Argolla">
           <div class="product-info">
             <div class="sku">SG1793</div>
             <div class="product-name">Vibrador con Control Remoto Estimulador Rosa Insertable con Argolla</div>
@@ -3579,7 +3641,8 @@
           </div>
         </div>
         <div class="product-card" data-name="vibrador con control remoto estimulador rojo insertable con cordón">
-          <img class="product-img" src="images/image49.jpg" alt="Vibrador con Control Remoto Estimulador Rojo Insertable con Cordón">
+          <img class="product-img" src="images/image49.jpg"
+            alt="Vibrador con Control Remoto Estimulador Rojo Insertable con Cordón">
           <div class="product-info">
             <div class="sku">SG0390</div>
             <div class="product-name">Vibrador con Control Remoto Estimulador Rojo Insertable con Cordón</div>
@@ -3977,7 +4040,7 @@
           </div>
         </div>
         <div class="product-card" data-name="vibrador babe cole 8"">
-          <img class="product-img" src="images/image125.jpg" alt="Vibrador Babe Cole 8&quot;">
+          <img class=" product-img" src="images/image125.jpg" alt="Vibrador Babe Cole 8&quot;">
           <div class="product-info">
             <div class="sku">ZDB-054</div>
             <div class="product-name">Vibrador Babe Cole 8&quot;</div>
@@ -4043,12 +4106,12 @@
 
 
   </main>
-<footer id="footer">
+  <footer id="footer" style="display: none;">
     <p><strong>KANDY SEX SHOP</strong> &copy; 2026. Todos los derechos reservados.</p>
   </footer>
 
   <div id="overlay" onclick="closeDrawer()"></div>
-  <button id="menu-btn" onclick="toggleDrawer()">
+  <button id="menu-btn" onclick="toggleDrawer()" style="display: none;">
     <svg viewBox="0 0 24 24">
       <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
     </svg>
@@ -4060,72 +4123,160 @@
       <button onclick="closeDrawer()" style="background:none;border:none;font-size:1.5rem;color:#ccc">✕</button>
     </div>
     <div class="drawer-grid">
-      <a class="drawer-link" href="#vibradores" onclick="closeDrawer()"><span>💜</span> Vibradores</a>
-      <a class="drawer-link" href="#anillos" onclick="closeDrawer()"><span>💍</span> Anillos</a>
-      <a class="drawer-link" href="#dildos" onclick="closeDrawer()"><span>🔥</span> Dildos</a>
-      <a class="drawer-link" href="#lubricantes" onclick="closeDrawer()"><span>💧</span> Lubricantes</a>
-      <a class="drawer-link" href="#lenceria" onclick="closeDrawer()"><span>🖤</span> Lencería</a>
-      <a class="drawer-link" href="#masturbadores" onclick="closeDrawer()"><span>🌀</span> Masturbadores</a>
-      <a class="drawer-link" href="#pluganal" onclick="closeDrawer()"><span>🔮</span> Plug Anal</a>
-      <a class="drawer-link" href="#comestibles" onclick="closeDrawer()"><span>🍬</span> Comestibles</a>
-      <a class="drawer-link" href="#arneses" onclick="closeDrawer()"><span>🔗</span> Arneses</a>
       <a class="drawer-link" href="#bolas" onclick="closeDrawer()"><span>⚪</span> Bolas</a>
       <a class="drawer-link" href="#bombas" onclick="closeDrawer()"><span>💨</span> Bombas</a>
-      <a class="drawer-link" href="#bondage" onclick="closeDrawer()"><span>🔒</span> Bondage</a>
-      <a class="drawer-link" href="#despedida" onclick="closeDrawer()"><span>🎉</span> Despedida</a>
-      <a class="drawer-link" href="#disfraces" onclick="closeDrawer()"><span>💃</span> Disfraces</a>
       <a class="drawer-link" href="#enemas" onclick="closeDrawer()"><span>🚿</span> Enemas</a>
+      <a class="drawer-link" href="#anillos" onclick="closeDrawer()"><span>💍</span> Anillos</a>
+      <a class="drawer-link" href="#arneses" onclick="closeDrawer()"><span>🔗</span> Arneses</a>
+      <a class="drawer-link" href="#bondage" onclick="closeDrawer()"><span>🔒</span> Bondage</a>
+      <a class="drawer-link" href="#comestibles" onclick="closeDrawer()"><span>🍬</span> Comestibles</a>
       <a class="drawer-link" href="#estimulantes" onclick="closeDrawer()"><span>⚡</span> Estimulantes</a>
+      <a class="drawer-link" href="#despedida" onclick="closeDrawer()"><span>🎉</span> Despedida</a>
+      <a class="drawer-link" href="#dildos" onclick="closeDrawer()"><span>🔥</span> Dildos</a>
+      <a class="drawer-link" href="#disfraces" onclick="closeDrawer()"><span>💃</span> Disfraces</a>
       <a class="drawer-link" href="#feromonas" onclick="closeDrawer()"><span>✨</span> Feromonas</a>
       <a class="drawer-link" href="#fundas" onclick="closeDrawer()"><span>🧲</span> Fundas</a>
+      <a class="drawer-link" href="#pluganal" onclick="closeDrawer()"><span>🔮</span> Plug Anal</a>
+      <a class="drawer-link" href="#lenceria" onclick="closeDrawer()"><span>🖤</span> Lencería</a>
+      <a class="drawer-link" href="#lubricantes" onclick="closeDrawer()"><span>💧</span> Lubricantes</a>
+      <a class="drawer-link" href="#masturbadores" onclick="closeDrawer()"><span>🌀</span> Masturbadores</a>
       <a class="drawer-link" href="#preservativos" onclick="closeDrawer()"><span>🛡️</span> Preservativos</a>
+      <a class="drawer-link" href="#vibradores" onclick="closeDrawer()"><span>💜</span> Vibradores</a>
       <a class="drawer-link" href="#masajeadores" onclick="closeDrawer()"><span>💆</span> Masajeadores</a>
     </div>
   </div>
   <script>
-    window.addEventListener('scroll', () => {
-      const nav = document.getElementById('nav-bar');
-      if (window.scrollY > window.innerHeight * 0.3) {
-        nav.style.transform = 'translateY(0)'; nav.style.opacity = '1';
-      } else {
-        nav.style.transform = 'translateY(-101%)'; nav.style.opacity = '0';
-      }
-    });
-
     function handleSearch(term) {
       term = term.toLowerCase().trim();
       const productCards = document.querySelectorAll('.product-card');
       const catSections = document.querySelectorAll('.cat-section');
       const catIndex = document.getElementById('cat-index');
+      
+      let noResults = document.getElementById('no-results');
+      if (!noResults) {
+        noResults = document.createElement('div');
+        noResults.id = 'no-results';
+        noResults.style.cssText = 'display:none; text-align:center; padding: 4rem 1rem; font-size: 1.2rem; color: #666; min-height: 60vh; align-items:center; justify-content:center; flex-direction:column; gap:1rem;';
+        noResults.innerHTML = `<div>No se encontraron resultados para "<strong id="search-term-display"></strong>"</div>`;
+        document.getElementById('main-content').appendChild(noResults);
+      }
+
       if (!term) {
-        productCards.forEach(c => c.style.display = 'block');
+        document.body.classList.remove('searching');
+        productCards.forEach(c => c.style.display = '');
         catSections.forEach(s => s.style.display = 'block');
         catIndex.style.display = 'block';
+        noResults.style.display = 'none';
         return;
       }
+      
+      document.body.classList.add('searching');
       catIndex.style.display = 'none';
+      let matchingCount = 0;
+      
       productCards.forEach(card => {
         const name = (card.getAttribute('data-name') || '').toLowerCase();
         const sku = card.querySelector('.sku')?.innerText.toLowerCase() || "";
-        card.style.display = (name.includes(term) || sku.includes(term)) ? 'block' : 'none';
+        if (name.includes(term) || sku.includes(term)) {
+          card.style.display = '';
+          matchingCount++;
+        } else {
+          card.style.display = 'none';
+        }
       });
+      
       catSections.forEach(s => {
-        const visible = s.querySelectorAll('.product-card[style="display: block;"]').length;
+        const visible = s.querySelectorAll('.product-card:not([style*="display: none"])').length;
         s.style.display = visible > 0 ? 'block' : 'none';
       });
+
+      if (matchingCount === 0) {
+        document.getElementById('search-term-display').textContent = term;
+        noResults.style.display = 'flex';
+      } else {
+        noResults.style.display = 'none';
+      }
     }
 
-    function enterCatalog(event) {
-      if (event) event.preventDefault();
-      const target = document.querySelector('#cat-index');
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
+    function enterCatalog() {
+      document.body.classList.add('catalog-open');
+      let cover = document.getElementById('cover');
+      let mainContent = document.getElementById('main-content');
+      let nav = document.getElementById('nav-bar');
+      let footer = document.getElementById('footer');
+
+      // 1. Suave desvanecimiento cruzado (fade-out del cover)
+      cover.style.transition = 'opacity 0.5s ease';
+      cover.style.opacity = '0';
+
+      setTimeout(() => {
+        cover.style.display = 'none';
+        
+        mainContent.style.opacity = '0';
+        mainContent.style.transition = 'opacity 0.5s ease';
+        mainContent.style.display = 'block';
+        
+        footer.style.opacity = '0';
+        footer.style.transition = 'opacity 0.5s ease';
+        footer.style.display = 'block';
+        
+        nav.style.display = 'flex';
+        nav.style.opacity = '0';
+        nav.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        nav.style.transform = 'translateY(0)';
+        
+        let mb = document.getElementById('menu-btn');
+        if (mb && window.innerWidth < 768) {
+          mb.style.opacity = '0';
+          mb.style.transition = 'opacity 0.5s ease';
+          mb.style.display = 'flex';
+        }
+
+        window.scrollTo(0, 0);
+
+        // 2. Fade-in del catálogo
+        setTimeout(() => {
+          mainContent.style.opacity = '1';
+          footer.style.opacity = '1';
+          nav.style.opacity = '1';
+          if (mb && window.innerWidth < 768) mb.style.opacity = '1';
+        }, 30);
+
+      }, 500); // velocidad del fade del cover
     }
 
     function goHome() {
       document.body.classList.remove('catalog-open');
-      window.scrollTo(0, 0);
+      let cover = document.getElementById('cover');
+      let mainContent = document.getElementById('main-content');
+      let nav = document.getElementById('nav-bar');
+      let footer = document.getElementById('footer');
+      let mb = document.getElementById('menu-btn');
+      
+      // 1. Fade-out del catálogo
+      mainContent.style.opacity = '0';
+      footer.style.opacity = '0';
+      nav.style.opacity = '0';
+      nav.style.transform = 'translateY(-101%)';
+      if (mb) mb.style.opacity = '0';
+      
+      setTimeout(() => {
+        mainContent.style.display = 'none';
+        footer.style.display = 'none';
+        nav.style.display = 'none';
+        if (mb) mb.style.display = 'none';
+        
+        cover.style.display = 'flex';
+        cover.style.opacity = '0';
+        
+        window.scrollTo(0, 0);
+        
+        // 2. Fade-in del cover
+        setTimeout(() => {
+          cover.style.opacity = '1';
+        }, 30);
+
+      }, 400);
     }
 
     function toggleDrawer() {
